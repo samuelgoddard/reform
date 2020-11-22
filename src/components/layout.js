@@ -9,7 +9,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Header />
-      <main id="scroll-container" className="pt-16 md:pt-16 xl:pt-20" data-scroll-container>
+      <main id="scroll-container" className="pt-16 md:pt-16 xl:pt-20"  data-scroll-container>
         <AnimatePresence exitBeforeEnter>
           {children}
         </AnimatePresence>
