@@ -33,6 +33,7 @@ module.exports = {
         '7xl': '8rem',
       },
       opacity: {
+        '5': '.05',
         '20': '.20',
       },
       maxHeight: {

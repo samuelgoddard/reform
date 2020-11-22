@@ -12,3 +12,13 @@
 
 /* Tailwind Utils */
 @import 'tailwindcss/utilities';
+
+.texture-overlay {
+	background-image: url(../images/texture.png);
+	background-size: 190px 190px;
+	background-repeat:repeat;
+}
+
+.texture-overlay--dark {
+	background-image: url(../images/texture-dark.png);
+}

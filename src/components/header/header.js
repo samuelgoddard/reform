@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Logo from "../logo/logo"
 
 const Header = () => (
-  <header className="border-b border-black border-t-10 w-full bg-offwhite fixed top-0 left-0 right-0 z-30">
+  <header className="border-b border-black border-t-10 w-full bg-offwhite fixed top-0 left-0 right-0 z-30 texture-overlay">
     <div className="flex flex-wrap items-center">
       <Link className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offblack relative" activeClassName="nav--active" to="/about">
         About Us

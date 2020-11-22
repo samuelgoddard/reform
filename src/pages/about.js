@@ -87,7 +87,7 @@ class AboutPage extends React.Component {
               <span className="top-0 left-0 absolute block max-w-xs p-8 pt-10 xl:text-lg">REFORM is an experienced, full-service agency that provides a range of services for modern building design and development.</span>
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 bg-black text-white relative z-30">
+            <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative z-30">
               <div className="max-w-3xl content relative">
                 <div className="relative z-0" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
                   <Img fluid={ this.props.data.about.image.fluid } className="w-full max-h-75screen object-cover object-center opacity-20" />

@@ -11,7 +11,7 @@ const FooterCta = ({ color }) => {
   }
   
   return (
-    <div className={ colorClasses }>
+    <div className={ colorClasses + `texture-overlay texture-overlay--dark` }>
       <div className="container">
         <div className="flex items-center justify-center h-screen max-h-90screen">
           <div className="w-full text-center -mt-12 md:-mt-16">

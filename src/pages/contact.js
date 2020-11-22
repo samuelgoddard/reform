@@ -35,10 +35,10 @@ const ContactPage = ({ data: { about }, location}) => {
               <span className="bottom-0 left-0 absolute block max-w-xs p-8 pb-12 xl:text-lg">hello@reformco.co.uk<br/>+44 115 9463 227</span>
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 bg-black text-white relative z-30">
-              <div className="max-w-3xl content relative h-full">
+            <motion.div variants={fade} className="md:col-span-1 bg-black text-white relative z-30 texture-overlay texture-overlay--dark">
+              <div className="max-w-3xl content relative h-full bg-red">
                 <div className="absolute top-0 left-0 right-0 z-0">
-                  <Img fluid={ about.image.fluid } className="w-full max-h-75screen object-cover object-center opacity-20 h-screen" />
+                  <Img fluid={ about.image.fluid } className="w-full max-h-75screen object-cover object-center opacity-20 h-screen mb-0 pb-0" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-64"></div>
                 </div>
                 
