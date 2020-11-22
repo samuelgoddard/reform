@@ -42,7 +42,7 @@ class AboutPage extends React.Component {
       scrollTrigger:{
         trigger: ".motif",
         scroller: "#scroll-container",
-        scrub: 0.75,
+        scrub: 0.85,
         start: 'top bottom',
         end:'+=10000',
       },
@@ -114,7 +114,7 @@ class AboutPage extends React.Component {
 
                     <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
                   
-                    <div className="mb-12 md:mb-16 xl:mb-24">
+                    <div className="my-12 md:my-16 xl:my-24">
                       {this.props.data.team.edges.map(({ node }, i) => {
                         return (
                           <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
