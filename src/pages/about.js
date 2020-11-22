@@ -1,13 +1,13 @@
 import React from "react"
 import SEO from "../components/seo"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { motion } from 'framer-motion'
 import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
 import Motif from "../components/motif"
 import Img from "gatsby-image"
 
-const AboutPage = ({ data: { about }, location}) => {
+const AboutPage = ({ data: { about, team }, location}) => {
   return (
     <>
       <SEO title={about.title} />
@@ -41,17 +41,46 @@ const AboutPage = ({ data: { about }, location}) => {
               </div>
               
               <div className="p-8 md:p-12 xl:p-16 -mt-32 relative z-10">
-                <h3>Development <span className="block">done</span> <span className="italic block">differently</span></h3>
-                
-                <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                <div className="mb-12 md:mb-16 xl:mb-24">
+                  <h3>Development <span className="block">done</span> <span className="italic block">differently</span></h3>
+                  
+                  <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
 
-                <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                  <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
 
-                <h3>An <span className="block italic">experienced</span> <span className="block">team</span></h3>
+                  <h3>An <span className="block italic">experienced</span> <span className="block">team</span></h3>
 
-                <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                  <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
 
-                <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                  <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                </div>
+
+                <div className="mb-12 md:mb-16 xl:mb-24">
+                  {team.edges.map(({ node }, i) => {
+                    return (
+                      <div className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
+                        <Img fluid={ node.image.fluid } className="w-full mb-8" />
+                        <div className="flex items-center border-b border-offwhite pb-5 mb-5">
+                          <h4 className="mb-0 pb-0">{ node.firstName } <span className="italic">{ node.secondName }</span></h4>
+                          { node.jobTitle && (
+                            <span className="ml-auto">{ node.jobTitle }</span>
+                          )}
+                        </div>
+                        { node.bio && (
+                          <div dangerouslySetInnerHTML={{ __html: node.bio }} className="w-9/12 xl:text-lg"></div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+
+                <div className="mb-12 md:mb-16 xl:mb-24">
+                  <h3 className="w-full md:w-10/12 lg:w-9/12">REFORM is an experienced, <span className="italic">full-service</span> agency that provides a range of services for <span className="italic">modern</span> building design &amp; development.</h3>
+                  
+                  <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+
+                  <Link to="/contact" className="text-lg md:text-xl xl:text-2xl underline">Contact Us</Link>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -73,6 +102,21 @@ export const query = graphql`
         }
       }
       slug
+    }
+    team: allDatoCmsTeam {
+      edges {
+        node {
+          firstName
+          secondName
+          jobTitle
+          image {
+            fluid(imgixParams: { w: "1200", h: "740", fit: "fillmax", crop: "center" }) {
+              ...GatsbyDatoCmsFluid
+            }
+          }
+          bio
+        }
+      }
     }
   }
 `
