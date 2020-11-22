@@ -87,7 +87,7 @@ class AboutPage extends React.Component {
             <motion.div variants={fade} className="md:col-span-1 md:h-screen flex items-center justify-center relative py-32 md:py-0 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
               <h1 className="text-center uppercase mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10">About<br/>Us</h1>
               <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
-                <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif animate-spin-slow"} />
+                <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif"} />
               </div>
 
               <span className="top-0 left-0 absolute block max-w-xs p-8 pt-10 xl:text-lg">REFORM is an experienced, full-service agency that provides a range of services for modern building design and development.</span>
