@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1 {
-  @apply text-6xl leading-negative;
+  @apply text-6xl leading-negative tracking-tighter;
   font-size: 10vw;
 
   @screen md {
@@ -24,7 +24,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  @apply text-4xl leading-none;
+  @apply text-4xl leading-none tracking-tight;
 
   @screen md {
     @apply text-5xl leading-none;
@@ -35,7 +35,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  @apply text-3xl leading-none;
+  @apply text-3xl leading-none tracking-tiny;
 
   @screen md {
     @apply text-4xl leading-none;
@@ -46,7 +46,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @apply text-xl leading-none;
+  @apply text-xl leading-none tracking-tiny;
 
   @screen md {
     @apply text-xl leading-none;
@@ -69,12 +69,15 @@ h4, .h4 {
   }
 }
 
+p {
+  @apply tracking-tiny;
+}
+
 /* Content */
 .content {
-  
   /* Paragraph */
   p {
-    @apply mb-6;
+    @apply mb-6 tracking-tiny;
   }
 
   /* Headings following paragraphs */

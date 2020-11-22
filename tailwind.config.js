@@ -37,9 +37,17 @@ module.exports = {
       },
       maxHeight: {
         '75screen': '75vh',
+        '90screen': '90vh',
+      },
+      minHeight: {
+        contentMask: '32px',
       },
       lineHeight: {
         'negative': '0.9',
+      },
+      letterSpacing: {
+        tighter: '-.04em',
+        tiny: '-.01em',
       },
       spacing: {
         '2px': '2px',

@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
-import { graphql, Link } from "gatsby"
+import Footer from "../components/footer/footer"
+import { graphql } from "gatsby"
 import { motion } from 'framer-motion'
 import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
@@ -21,7 +22,7 @@ const IndexPage = ({ data: { home }, location}) => {
           enter: { transition: { staggerChildren: 0.055 }}
         }}
       >
-        <div className="container">
+        <div className="container pt-16 md:pt-16 xl:pt-20">
           <motion.div variants={fade} className="pt-12 md:pt-16 xl:pt-20 relative z-10">
             <h1 className="text-center uppercase">Development <span className="block">Done Differently</span></h1>
           </motion.div>
@@ -29,7 +30,7 @@ const IndexPage = ({ data: { home }, location}) => {
           <motion.div variants={fade} className="-mt-12 md:-mt-16 xl:-mt-20 pb-8 mb-12 md:mb-20 lg:mb-24 xl:mb-32 border-b border-black relative z-0">
             <Img fluid={ home.image.fluid } className="w-full opacity-75" />
 
-            <span className="bottom-0 left-0 absolute block max-w-xs p-8 pb-16 xl:text-lg">Suspendisse nec semper massa, a vestibulum massa. Aliquam &amp; volutpat. Maecenas accumsan ac ex eget commodo. Sed iaculis nulla non lacus tincidunt fringilla.</span>
+            <span className="bottom-0 left-0 absolute block max-w-xs p-8 pb-16 xl:text-lg tracking-tiny">Suspendisse nec semper massa, a vestibulum massa. Aliquam &amp; volutpat. Maecenas accumsan ac ex eget commodo. Sed iaculis nulla non lacus tincidunt fringilla.</span>
           </motion.div>
 
           <motion.div variants={fade} className="content pb-12 md:pb-20 lg:pb-24 xl:pb-32">
@@ -58,42 +59,10 @@ const IndexPage = ({ data: { home }, location}) => {
           </motion.div>
         </div>
 
-        <motion.div variants={fade} className="bg-black text-white">
-          <div className="container">
-            <div className="flex items-center justify-center h-screen max-h-75screen">
-              <div className="w-full text-center -mt-12 md:-mt-16">
-                <div className="w-4 relative mx-auto mb-8 md:mb-12">
-                  <div className="w-px h-12 md:h-16 bg-offwhite"></div>
-                  <div className="w-3 h-3 -ml-1 rounded-full absolute bottom-0 left-0 bg-offwhite"></div>
-                </div>
-                <h2 className="max-w-4xl mx-auto mb-8 md:mb-12">Looking for a <span className="italic">partner</span> for your next development?</h2>
-
-                <Link to="/contact" className="text-base md:text-lg xl:text-xl uppercase text-center inline-block mx-auto font-medium border-b-2 border-offwhite">Get in touch</Link>
-              </div>
-            </div>
-          </div>
+        <motion.div variants={fade}>
+          <Footer />
         </motion.div>
       </motion.section>
-
-      <footer className="bg-black text-offwhite border-offwhite border-t w-full">
-        <div className="flex flex-wrap items-center">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-r border-offwhite">
-            Insta<span className="hidden md:inline">gram</span>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite" to="/about">
-            Twitter
-          </a>
-          <span className="text-sm md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mx-auto text-center hidden xl:block">
-            Development done <span className="italic">differently</span>
-          </span>
-          <Link className="text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite" to="/contact">
-            Privacy <span className="hidden md:inline">Policy</span>
-          </Link>
-          <span className="text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-l border-offwhite">
-            &copy;2020
-          </span>
-        </div>
-      </footer>
     </>
   )
 }
