@@ -74,7 +74,7 @@ class AboutPage extends React.Component {
           animate="enter"
           exit="exit"
         >
-          <div className="grid md:grid-cols-2 pt-16 md:pt-16 xl:pt-20" data-scroll>
+          <div className="grid md:grid-cols-2 pt-16 md:pt-16 xl:pt-20">
             {/* The Pinned area - BUGFIX */}
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
@@ -89,12 +89,14 @@ class AboutPage extends React.Component {
 
             <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative z-30">
               <div className="max-w-3xl content relative" id="content-pane">
-                <div className="relative z-30 h-screen max-h-screen" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+                <div className="relative z-10 h-screen max-h-screen" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
                   <Img fluid={ this.props.data.about.image.fluid } className="w-full max-h-screen object-cover object-center opacity-20 relative z-0" />
                   
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-64 z-10"></div>
+                </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent h-72 z-30"></div>
+                <div className="relative z-30" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
+                  <div className="bg-gradient-to-t w-full h-72 from-black via-black to-transparent absolute bottom-0 left-0 right-0 z-30"></div>
                 </div>
                 
                 <div className="p-8 md:p-12 xl:p-16 md:-mt-128 h-full">
@@ -111,34 +113,32 @@ class AboutPage extends React.Component {
                     <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
 
                     <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
-                  </div>
+                  
+                    <div className="mb-12 md:mb-16 xl:mb-24">
+                      {this.props.data.team.edges.map(({ node }, i) => {
+                        return (
+                          <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
+                            <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" />
+                            <div className="flex items-center border-b border-offwhite pb-5 mb-5">
+                              <h4 className="mb-0 pb-0">{ node.firstName } <span className="italic">{ node.secondName }</span></h4>
+                              { node.jobTitle && (
+                                <span className="ml-auto">{ node.jobTitle }</span>
+                              )}
+                            </div>
+                            
+                          </motion.div>
+                        )
+                      })}
+                    </div>
 
-                  <div className="mb-12 md:mb-16 xl:mb-24" data-scroll>
-                    {this.props.data.team.edges.map(({ node }, i) => {
-                      return (
-                        <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
-                          <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" />
-                          <div className="flex items-center border-b border-offwhite pb-5 mb-5">
-                            <h4 className="mb-0 pb-0">{ node.firstName } <span className="italic">{ node.secondName }</span></h4>
-                            { node.jobTitle && (
-                              <span className="ml-auto">{ node.jobTitle }</span>
-                            )}
-                          </div>
-                          {/* { node.bio && (
-                            <span dangerouslySetInnerHTML={{ __html: node.bio }} className="w-9/12 xl:text-lg block"></span>
-                          )} */}
-                        </motion.div>
-                      )
-                    })}
-                  </div>
+                    <div className="mb-12 md:mb-16 xl:mb-24">
+                      <h3 className="w-full md:w-10/12 lg:w-9/12">REFORM is an experienced, <span className="italic">full-service</span> agency that provides a range of services for <span className="italic">modern</span> building design &amp; development.</h3>
+                      
+                      <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
 
-                  <div className="mb-12 md:mb-16 xl:mb-24">
-                    <h3 className="w-full md:w-10/12 lg:w-9/12">REFORM is an experienced, <span className="italic">full-service</span> agency that provides a range of services for <span className="italic">modern</span> building design &amp; development.</h3>
-                    
-                    <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 xl:text-lg pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
+                      <Link to="/contact" className="text-lg md:text-xl xl:text-2xl underline">Contact Us</Link>
 
-                    <Link to="/contact" className="text-lg md:text-xl xl:text-2xl underline">Contact Us</Link>
-
+                    </div>
                   </div>
                 </div>
               </div>
