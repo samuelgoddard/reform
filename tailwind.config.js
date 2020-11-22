@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        'spin-slow': 'spin 30s linear infinite',
+        'spin-slow': 'spin 24s linear infinite',
       },
       borderWidth: {
         '10': '10px',

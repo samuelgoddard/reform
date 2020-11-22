@@ -34,11 +34,11 @@ class AboutPage extends React.Component {
     ScrollTrigger.scrollerProxy("#scroll-container", {
       scrollTop(value) {
         return arguments.length ? locomotiveScroll.scrollTo(value, 0, 0) : locomotiveScroll.scroll.instance.scroll.y;
-      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+      },
       getBoundingClientRect() {
         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
       },
-      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+      // Mobile stuff to potentially remove....
       pinType: document.querySelector("#scroll-container").style.transform ? "transform" : "fixed"
     });
 
@@ -51,7 +51,7 @@ class AboutPage extends React.Component {
         start: 'top bottom',
         end:'+=10000',
       },
-      rotation: 360*1.5,
+      rotation: -360*1.5,
       scale: 1,
       duration:1,
       ease: Power2.easeInOut,
@@ -87,7 +87,7 @@ class AboutPage extends React.Component {
             <motion.div variants={fade} className="md:col-span-1 md:h-screen flex items-center justify-center relative py-32 md:py-0 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
               <h1 className="text-center uppercase mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10">About<br/>Us</h1>
               <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
-                <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif"} />
+                <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif animate-spin-slow"} />
               </div>
 
               <span className="top-0 left-0 absolute block max-w-xs p-8 pt-10 xl:text-lg">REFORM is an experienced, full-service agency that provides a range of services for modern building design and development.</span>
