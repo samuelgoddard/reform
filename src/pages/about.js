@@ -88,14 +88,17 @@ class AboutPage extends React.Component {
             </motion.div>
 
             <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative z-30">
-              <div className="max-w-3xl content relative">
-                <div className="relative z-0" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-                  <Img fluid={ this.props.data.about.image.fluid } className="w-full max-h-75screen object-cover object-center opacity-20" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-64"></div>
+              <div className="max-w-3xl content relative" id="content-pane">
+                <div className="relative z-30 h-screen max-h-screen" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+                  <Img fluid={ this.props.data.about.image.fluid } className="w-full max-h-screen object-cover object-center opacity-20 relative z-0" />
+                  
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-64 z-10"></div>
+
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent h-72 z-30"></div>
                 </div>
                 
-                <div className="p-8 md:p-12 xl:p-16 -mt-32 relative z-10">
-                  <div className="mb-12 md:mb-16 xl:mb-24 relative">
+                <div className="p-8 md:p-12 xl:p-16 md:-mt-128 h-full">
+                  <div className="mb-12 md:mb-16 xl:mb-24 relative z-20">
 
                     <h3>Development <span className="block">done</span> <span className="italic block">differently</span></h3>
                     

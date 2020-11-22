@@ -52,6 +52,11 @@ module.exports = {
       },
       spacing: {
         '2px': '2px',
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+        '128': '32rem',
+        '25vh': '25vh'
       },
     }
   },
