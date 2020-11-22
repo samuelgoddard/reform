@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "./Logo"
+import Logo from "../components/Logo"
 
 const Header = () => (
   <header className="border-b border-black border-t-10 w-full bg-offwhite fixed top-0 left-0 right-0 z-30">
