@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { AnimatePresence } from 'framer-motion'
 
-import Header from "./header"
+import Header from "./header/header"
 import "../styles/main.css"
 
 const Layout = ({ children, location }) => {
