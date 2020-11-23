@@ -10,7 +10,12 @@ import Img from "gatsby-image"
 const IndexPage = ({ data: { home }, location}) => {
   return (
     <>
-      <SEO title={home.title} />
+      <SEO
+        titleOverride={home.metaTags && home.metaTags.title ? home.metaTags.title : home.title }
+        descriptionOverride={home.metaTags && home.metaTags.description ? home.metaTags.description : null }
+        pathnameOverride={location.pathname}
+        imageOverride={home.metaTags && home.metaTags.image ? home.metaTags.image.url : null }
+      />
 
       <Scroll callback={location} />
       
@@ -76,6 +81,14 @@ export const query = graphql`
       image {
         fluid(imgixParams: { w: "1600", h: "650", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid
+        }
+      }
+      metaTags {
+        title
+        description
+        twitterCard
+        image {
+          url
         }
       }
       slug

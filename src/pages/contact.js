@@ -11,9 +11,15 @@ import Img from "gatsby-image"
 const ContactPage = ({ data: { about }, location}) => {
   return (
     <>
-      <SEO title={about.title} />
+      <SEO
+        titleOverride={"Contact"}
+        descriptionOverride={null}
+        pathnameOverride={location.pathname}
+        imageOverride={null}
+      />
 
       <Scroll callback={location} />
+
       <div className="md:h-screen  flex flex-wrap flex-col">
         <motion.section
           initial="initial"

@@ -64,9 +64,14 @@ class AboutPage extends React.Component {
   render() {
     return (
       <>
-        <SEO title={this.props.data.about.title} />
+        <SEO
+          titleOverride={this.props.data.about.metaTags && this.props.data.about.metaTags.title ? this.props.data.about.metaTags.title : this.props.data.about.title }
+          descriptionOverride={this.props.data.about.metaTags && this.props.data.about.metaTags.description ? this.props.data.about.metaTags.description : null }
+          pathnameOverride={this.props.location.pathname}
+          imageOverride={this.props.data.about.metaTags && this.props.data.about.metaTags.image ? this.props.data.about.metaTags.image.url : null }
+        />
 
-        {/* <Scroll callback={this.props.data.location} /> */}
+      {/* <Scroll callback={this.props.data.location} /> */}
         
         <motion.section
           initial="initial"
@@ -145,7 +150,7 @@ class AboutPage extends React.Component {
             </motion.div>
           </div>
         </motion.section>
-        
+          
         <motion.section
           initial="initial"
           className=""
@@ -172,6 +177,14 @@ export const query = graphql`
       image {
         fluid(imgixParams: { w: "1400", h: "1500", fit: "fillmax", crop: "center", sat: -100 }) {
           ...GatsbyDatoCmsFluid
+        }
+      }
+      metaTags {
+        title
+        description
+        twitterCard
+        image {
+          url
         }
       }
       slug
