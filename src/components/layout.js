@@ -9,7 +9,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <div className="w-full h-screen absolute top-0 left-0 right-0 bottom-0 texture-overlay z-0"></div>
-      <Header />
+      <Header noLogo={ location.pathname === '/' ? true : false }/>
       <main id="scroll-container" data-scroll-container>
         <AnimatePresence exitBeforeEnter>
           {children}
