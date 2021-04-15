@@ -5,8 +5,8 @@ import { graphql } from "gatsby"
 import { motion } from 'framer-motion'
 import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
-import Motif from "../components/motif"
-import Img from "gatsby-image"
+import NumberShape from "../components/numberShape"
+// import Img from "gatsby-image"
 
 const ContactPage = ({ data: { about }, location}) => {
   return (
@@ -23,36 +23,48 @@ const ContactPage = ({ data: { about }, location}) => {
       <div className="md:h-screen  flex flex-wrap flex-col">
         <motion.section
           initial="initial"
-          className="flex-1"
+          className="flex-1 bg-offwhitelight"
           animate="enter"
           exit="exit"
         >
-          <div className="grid md:grid-cols-2 pt-16 md:pt-16 xl:pt-20 relative h-full">
+          <div className="grid md:grid-cols-12 pt-16 md:pt-16 xl:pt-20 relative h-full">
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-1 flex items-center justify-center relative py-32 md:py-0 overflow-hidden">
-              <h1 className="text-center uppercase mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10">Contact<br/>Us</h1>
-              <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
-                <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 animate-coin"} />
-              </div>
+            <motion.div variants={fade} className="md:col-span-4 xl:col-span-4 2xl:col-span-3 relative overflow-hidden">
 
-              <span className="top-0 left-0 absolute block max-w-xs p-8 pt-10 xl:text-lg">44 Wade Lane<br/>Salford Priors<br/>Nottingham<br/>NG11 2JR</span>
-
-              <span className="bottom-0 left-0 absolute block max-w-xs p-8 pb-12 xl:text-lg">hello@reformco.co.uk<br/>+44 115 9463 227</span>
+              <span className="top-0 left-0 md:absolute block p-6">
+                <NumberShape number="C" />
+              </span>
+              <span className="bottom-0 left-0 md:absolute block max-w-xs p-6 pb-12 xl:text-lg">
+                <span className="block mb-3 md:mb-10">
+                  <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
+                  <span className="inline-block transform rotate-90">↳</span> Get in touch</span>
+                </span>
+                Reform<br/>
+                The Old Farmhouse<br/>
+                Bunnison Lane<br/>
+                Colston Bassett<br/>
+                Nottinghamshire<br/>
+                NG12 3FF<br/><br/>
+                hello@reformco.co.uk<br/>
+                +44 115 9463 227
+              </span>
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 bg-black text-white relative z-30 texture-overlay texture-overlay--dark">
-              <div className="max-w-3xl content relative h-full bg-red">
-                <div className="absolute top-0 left-0 right-0 z-0">
-                  <Img fluid={ about.image.fluid } className="w-full max-h-75screen object-cover object-center opacity-20 h-screen mb-0 pb-0" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-64"></div>
-                </div>
-                
-                <div className="p-8 md:p-16 xl:p-20 relative z-10 flex flex-wrap items-center h-full">
+            <motion.div variants={fade} className="md:col-span-8 xl:col-span-8 2xl:col-span-9 relative z-30 md:border-l border-black pb-24 md:pb-0">
+              <div className="max-w-4xl content relative h-full bg-red">                
+                <div className="p-6 md:p-16 xl:p-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
-                    <h3>Looking for a partner for your next development?</h3>
+                    <h1 className="h2 mb-8 md:mb-12 xl:mb-16">Looking for a partner for your next development?</h1>
                     
-                    <p className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue.</p>
+                    <form className="block w-full max-w-xl">
+                      <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Name *" required />
+                      <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Email *" required />
+                      <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Phone" required />
+                      <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-6 md:mb-12" placeholder="Project Details" />
+
+                      <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block border-b border-black">Send Details</button>
+                    </form>
                   </div>
                 </div>
               </div>

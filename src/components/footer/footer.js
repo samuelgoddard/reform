@@ -32,7 +32,7 @@ const Footer = ({ color, hideCta }) => {
             Privacy <span className="hidden md:inline">Policy</span>
           </Link>
           <span className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-l`}>
-            &copy;2020
+            &copy;2021
           </span>
         </div>
       </footer>

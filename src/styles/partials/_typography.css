@@ -52,7 +52,7 @@ h4, .h4 {
     @apply text-3xl leading-none;
   }
   @screen xl {
-    @apply text-4xl leading-none;
+    @apply text-3xl leading-none;
   }
 }
 

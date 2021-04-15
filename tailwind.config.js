@@ -24,7 +24,8 @@ module.exports = {
       colors: {
         'black': '#1F1F1F',
         'offblack': '#333333',
-        'offwhite': '#E5E1DF'
+        'offwhite': '#E5E1DF',
+        'offwhitelight' : '#EBE9E8'
       },
       fontFamily: {
         'sans': ['Freigeist', 'Helvetica', 'Arial', 'sans-serif'],
@@ -37,6 +38,7 @@ module.exports = {
         '20': '.20',
       },
       maxHeight: {
+        '65screen': '65vh',
         '75screen': '75vh',
         '90screen': '90vh',
       },
