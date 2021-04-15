@@ -13,7 +13,7 @@
 /* Tailwind Utils */
 @import 'tailwindcss/utilities';
 
-.texture-overlay {
+/* .texture-overlay {
 	background-image: url(../images/texture.png);
 	background-size: 190px 190px;
 	background-repeat:repeat;
@@ -21,7 +21,7 @@
 
 .texture-overlay--dark {
 	background-image: url(../images/texture-dark.png);
-}
+} */
 
 .animate-coin {
   animation: coin-rotate 13s ease-in-out infinite;
@@ -64,4 +64,12 @@
 .MarqueeContent {
     display: inline-block;
     text-align: left;
+}
+
+.home-image {
+  mix-blend-mode: darken;
+
+  div, img, picture {
+    mix-blend-mode: darken;
+  }
 }

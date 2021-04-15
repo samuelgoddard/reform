@@ -43,16 +43,16 @@ const IndexPage = ({ data: { home }, location}) => {
               </div>
             </motion.div>
 
-            <motion.div variants={fade} className="-mt-12 md:-mt-16 xl:-mt-20 border-b border-black relative z-0">
-              <div className="pb-12 md:pb-20">
-                <Img fluid={ home.image.fluid } className="w-full opacity-75" />
+            <motion.div variants={fade} className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
+              <div className="pb-12 md:pb-20 bg-offwhite">
+                <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhite" />
 
                 <div className="flex flex-wrap">
                   <div className="flex-1 block">
                     <div className="w-full h-px bg-offblack mr-12"></div>
                   </div>
                   
-                  <div className="w-11/12 max-w-3xl text-right ml-auto -mt-12 md:-mt-16 xl:-mt-20 px-5 md:px-8 xl:px-12">
+                  <div className="w-11/12 max-w-xl xl:max-w-3xl text-right ml-auto -mt-12 md:-mt-32 xl:-mt-56 px-5 md:px-8 xl:px-12">
                     <div className="ml-auto text-right">
                       <span className="flex items-center ml-auto text-right justify-center w-10 md:w-12 h-10 md:h-12 mb-4 md:mb-6 bg-offblack rounded-full text-white transform -skew-y-12 rotate-12 scale-x-75 text-lg md:text-2xl italic"><span className="transform block -rotate-6">R</span></span>
                     </div>
@@ -130,7 +130,9 @@ export const query = graphql`
     home: datoCmsHome {
       title
       image {
-        fluid(imgixParams: { w: "1600", h: "650", fit: "fillmax", crop: "center" }) {
+        fluid(
+          maxWidth: 2400,
+          imgixParams: { w: "2400", h: "1521" }) {
           ...GatsbyDatoCmsFluid
         }
       }
