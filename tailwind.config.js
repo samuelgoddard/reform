@@ -40,6 +40,7 @@ module.exports = {
       maxHeight: {
         '65screen': '65vh',
         '75screen': '75vh',
+        '80screen': '82vh',
         '90screen': '90vh',
       },
       minHeight: {

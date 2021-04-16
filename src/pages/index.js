@@ -109,12 +109,20 @@ const IndexPage = ({ data: { home }, location}) => {
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Development is a complex process and we have achieved many successful projects to know the constraints and pitfalls to be aware of. We specialise in dentification of market facing uses, addressing site constraints, reviewing development principles, appraisals, cost consulting and funding. </p>
                     </div>
 
-                    <div className="w-full p-5 md:p-12 lg:p-16 xl:p-20">
+                    <div className="w-full border-b border-offblack  p-5 md:p-12 lg:p-16 xl:p-20">
                     <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="4" />
 
                       <span className="inline-block">Site Promotion / Planning</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Feasibility studies, pre-app planning, planning strategies, application consultation and delivery. We have a large amount of experience in this area and have worked closely with the same consultants for many years. Our proven track record of delivering developments helps us identity how to promote sites effectively by unlocking the potential within land and building opportunities.</p>
+                    </div>
+
+                    <div className="w-full p-5 md:p-12 lg:p-16 xl:p-20">
+                    <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
+                      <NumberShape number="5" />
+
+                      <span className="inline-block">Real Estate Advisory</span></h4>
+                      <p className="w-10/12 md:w-10/12 xl:w-10/12">A conclusive and profitable exit is just as important as achieving planning. Reform has tailored many property deals to fulfil this important part of the process, both with our own projects and those of clients. We work with agents throughout the UK to source opportunities for our clients and investors.</p>
                     </div>
                   </div>
                 </div>
@@ -141,7 +149,7 @@ export const query = graphql`
         fluid(
           maxWidth: 1900,
           imgixParams: { w: "1900", h: "1121", sharp: 10 }) {
-          ...GatsbyDatoCmsFluid
+          ...GatsbyDatoCmsFluid_noBase64
         }
       }
       metaTags {

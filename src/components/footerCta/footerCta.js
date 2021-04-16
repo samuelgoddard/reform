@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image'
 
 const FooterCta = ({ color }) => {
   let colorClasses = `bg-black text-offwhite `
@@ -9,10 +10,30 @@ const FooterCta = ({ color }) => {
     colorClasses = `bg-offwhite text-offblack `
     colorBorderClasses = `border-offblack `
   }
+
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "footer.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   
   return (
-    <div className={ colorClasses + `texture-overlay texture-overlay--dark` }>
-      <div className="container">
+    <div className={ colorClasses + `texture-overlay texture-overlay--dark relative` }>
+      <div className="bg-gradient-to-b w-full h-84 block from-black to-transparent absolute top-0 left-0 right-0 z-10 opacity-100"></div>
+
+      <div className="bg-gradient-to-t w-full h-64 block from-black via-black to-transparent absolute bottom-0 left-0 right-0 z-10 opacity-75"></div>
+
+      <div className="absolute inset-0 opacity-20 z-0">
+        <Img fluid={data.file.childImageSharp.fluid} alt="Footer Image" className="opacity-50 object-cover object-center w-full h-full" />
+      </div>
+
+      <div className="container relative z-20">
         <div className="flex items-center justify-center h-screen max-h-90screen">
           <div className="w-full text-center -mt-12 md:-mt-16">
             <div className="w-4 relative mx-auto mb-8 md:mb-12">

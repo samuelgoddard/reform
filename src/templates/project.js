@@ -24,16 +24,16 @@ const ProjectPage = ({ data: { project }, location}) => {
       <div className="flex flex-wrap flex-col">
         <motion.section
           initial="initial"
-          className="flex-1 bg-offwhitelight w-full"
+          className="flex-1 w-full md:min-h-screen max-h-screen"
           animate="enter"
           exit="exit"
         >
-          <div className="grid md:grid-cols-12 relative h-full md:min-h-screen">
-            <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
+          <div className="grid md:grid-cols-12 relative h-full md:min-h-screen max-h-screen">
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div> */}
 
-            <motion.div variants={fade} className="md:col-span-7 xl:col-span-7 2xl:col-span-8 pt-6 md:pt-10 px-6 md:pr-0 xl:pt-12 mb-8 md:mb-0">
+            <motion.div variants={fade} className="md:col-span-7 xl:col-span-7 2xl:col-span-8 pt-6 md:pt-10 px-6 md:pr-0 xl:pt-12 mb-8 md:mb-0 h-full">
               <div className="flex flex-col w-full h-full mt-16">
-                <Img fluid={project.image.fluid} className="w-full h-full object-cover object-center mb-6" />
+                <Img fluid={project.image.fluid} className="w-full h-full object-cover object-center mb-6 md:min-h-90screen max-h-80screen" />
 
                 <div className="border-t border-black w-full h-48 pt-6 flex flex-wrap">
                   <div className="">
@@ -44,7 +44,7 @@ const ProjectPage = ({ data: { project }, location}) => {
               </div>
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-5 xl:col-span-5 2xl:col-span-4 relative z-30">
+            <motion.div variants={fade} className="md:col-span-5 xl:col-span-5 2xl:col-span-4 relative z-30 h-full md:min-h-screen max-h-screen">
               <div className="max-w-4xl content relative h-full">
                 <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:pt-32">
 
