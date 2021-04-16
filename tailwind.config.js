@@ -40,10 +40,11 @@ module.exports = {
       maxHeight: {
         '65screen': '65vh',
         '75screen': '75vh',
-        '80screen': '82vh',
+        '80screen': '80vh',
         '90screen': '90vh',
       },
       minHeight: {
+        '90screen': '90vh',
         contentMask: '32px',
       },
       lineHeight: {

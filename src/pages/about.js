@@ -85,7 +85,7 @@ class AboutPage extends React.Component {
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
             <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 h2 max-w-xl 3xl:max-w-2xl">At Reform we thrive on <span className="italic">identifying</span> development opportunities both for ourselves &amp; with land owners not realising the true <span className="italic">potential</span> of their assets.</h1>
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 h2 max-w-xl 3xl:max-w-2xl md:pr-8 xl:pr-0">At Reform we thrive on <span className="italic">identifying</span> development opportunities both for ourselves &amp; with land owners not realising the true <span className="italic">potential</span> of their assets.</h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
               </div> */}
@@ -103,7 +103,7 @@ class AboutPage extends React.Component {
                 <div className="h-full">
                   <div className="mb-12 md:mb-16 xl:mb-24 relative z-30">
 
-                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative z-0 max-h-65screen" />
+                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative z-0 md:h-screen" />
 
                     <div className="p-8 md:p-12 xl:p-16">
                       <div className="lg:flex lg:flex-wrap items-start">
@@ -187,8 +187,8 @@ export const query = graphql`
       title
       image {
         fluid(
-          maxWidth: 1400,
-          imgixParams: { w: "1400", h: "1500", fit: "fillmax", crop: "center" }) {
+          maxWidth: 1600,
+          imgixParams: { w: "1600", h: "1600", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid
         }
       }

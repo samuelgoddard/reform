@@ -74,7 +74,7 @@ const ContactPage = ({ data: { about }, location}) => {
 
         <motion.section
           initial="initial"
-          className=""
+          className="bg-offwhitelight"
           animate="enter"
           exit="exit"
         >
