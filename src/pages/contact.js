@@ -46,8 +46,8 @@ const ContactPage = ({ data: { about }, location}) => {
                 Colston Bassett<br/>
                 Nottinghamshire<br/>
                 NG12 3FF<br/><br/>
-                hello@reformco.co.uk<br/>
-                +44 115 9463 227
+                <a href="mailto:hello@reformco.co.uk" className="hover:underline focus:underline">hello@reformco.co.uk</a><br/>
+                <a href="tel:01159463227" className="hover:underline focus:underline">+44 115 9463 227</a>
               </span>
             </motion.div>
 
