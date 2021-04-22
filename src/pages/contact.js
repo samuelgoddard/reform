@@ -8,7 +8,7 @@ import { fade } from "../helpers/transitionHelper"
 import NumberShape from "../components/numberShape"
 // import Img from "gatsby-image"
 
-const ContactPage = ({ data: { about }, location}) => {
+const ContactPage = ({ data: { contact }, location}) => {
   return (
     <>
       <SEO
@@ -40,14 +40,15 @@ const ContactPage = ({ data: { about }, location}) => {
                   <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                   <span className="inline-block transform rotate-90">↳</span> Get in touch</span>
                 </span>
-                Reform<br/>
-                The Old Farmhouse<br/>
-                Bunnison Lane<br/>
-                Colston Bassett<br/>
-                Nottinghamshire<br/>
-                NG12 3FF<br/><br/>
-                <a href="mailto:hello@reformco.co.uk" className="hover:underline focus:underline">hello@reformco.co.uk</a><br/>
-                <a href="tel:01159463227" className="hover:underline focus:underline">+44 115 9463 227</a>
+                { contact.address && (
+                  <span className="mb-2 block" dangerouslySetInnerHTML={{ __html: contact.address }} />
+                )}
+                { contact.emailAddress && (
+                  <a href={`mailto:${contact.emailAddress}`} className="block hover:underline focus:underline">{contact.emailAddress}</a>
+                )}
+                { contact.phoneNumber && (
+                  <a href={`tel:${contact.phoneNumber}`} className="block hover:underline focus:underline">{contact.phoneNumber}</a>
+                )}
               </span>
             </motion.div>
 
@@ -93,14 +94,11 @@ export default ContactPage
 
 export const query = graphql`
   query ContactQuery {
-    about: datoCmsAbout {
-      title
-      image {
-        fluid(imgixParams: { w: "1400", h: "1500", fit: "fillmax", crop: "center", sat: -100 }) {
-          ...GatsbyDatoCmsFluid
-        }
-      }
-      slug
+    contact: datoCmsContact {
+      emailAddress
+      phoneNumber
+      address
+      instagram
     }
   }
 `

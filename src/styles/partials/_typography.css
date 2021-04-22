@@ -21,6 +21,10 @@ h1, .h1 {
   @screen 2xl {
     @apply text-7xl leading-negative;
   }
+
+  p {
+    @apply tracking-tight;
+  }
 }
 
 .about-title {
@@ -52,6 +56,10 @@ h2, .h2 {
   }
   @screen xl {
     @apply text-6xl leading-none;
+  }
+
+  p {
+    @apply tracking-tight;
   }
 }
 

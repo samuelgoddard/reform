@@ -10,6 +10,9 @@ import { fade } from "../helpers/transitionHelper"
 import Img from "gatsby-image"
 
 const IndexPage = ({ data: { home }, location}) => {
+
+  const whatWeDoBlocksFirstCol = home.whatWeDoBlocks.slice(0,2)
+  const whatWeDoBlocksSecondCol = home.whatWeDoBlocks.slice(2)
   return (
     <>
       <SEO
@@ -61,7 +64,7 @@ const IndexPage = ({ data: { home }, location}) => {
                     </div>
 
 
-                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-16"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-16" dangerouslySetInnerHTML={{ __html:home.heroText }}></h2>
                   </div>
                 </div>
               </div>
@@ -84,46 +87,32 @@ const IndexPage = ({ data: { home }, location}) => {
               <div className="">
                 <div className="grid md:grid-cols-2">
                   <div className="md:grid-col-1 md:border-r border-offblack">
-                    <div className="w-full border-b border-offblack p-5 md:p-12 lg:p-16 xl:p-20">
+                    {whatWeDoBlocksFirstCol.map(({ heading, text }, i) => {
+                      return (
+                        <div key={i} className={`w-full p-5 md:p-12 lg:p-16 xl:p-20 ${ i === whatWeDoBlocksFirstCol.length - 1 ? '' : 'border-b border-offblack' }`}>
 
-                      <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
-                      <NumberShape number="1" />
+                          <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
+                          <NumberShape number={i + 1} />
 
-                      <span className="inline-block ml-1 md:ml-2">Architecture</span></h4>
-                      <p className="w-10/12 md:w-10/12 xl:w-10/12">Our expertise in this area represents a key un-locker of value and underpins the business. Reform has its own, in-house, fully functioning architectural practice and can provide a full range of architectural services from inception through to completion. So whether we are acting for ourselves and our partners, or for third party clients in the traditional way, we can rapidly spot ways of releasing the commercial potential of a project owing to the decades of architectural experience of our team..</p>
-                    </div>
-                    <div className="w-full p-5 md:p-12 lg:p-16 xl:p-20 border-b border-offblack md:border-0">
-                    <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
-                      <NumberShape number="2" />
-
-                      <span className="inline-block ml-1 md:ml-2">Development Delivery</span></h4>
-                      <p className="w-10/12 md:w-10/12 xl:w-10/12">Partnering land owners to deliver sites which have been promoted through planning and ready for delivery. We employ our own key trades and site management. We also have a very reliable and long-standing relationship with a number of sub-contractors. Reform has the experience in delivery of many property asset classes including residential, HA, office and other commercial uses.</p>
-                    </div>
+                          <span className="inline-block ml-1 md:ml-2">{ heading }</span></h4>
+                          <div className="w-10/12 md:w-10/12 xl:w-10/12" dangerouslySetInnerHTML={{ __html: text }} />
+                        </div>
+                      )
+                    })} 
                   </div>
                   <div className="md:grid-col-1">
-                    <div className="w-full border-b border-offblack p-5 md:p-12 lg:p-16 xl:p-20">
-                    <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
-                      <NumberShape number="3" />
+                    {whatWeDoBlocksSecondCol.map(({ heading, text }, i) => {
+                      return (
+                        <div key={i} className={`w-full p-5 md:p-12 lg:p-16 xl:p-20 ${ i === whatWeDoBlocksSecondCol.length - 1 ? '' : 'border-b border-offblack' }`}>
 
-                      <span className="inline-block ml-1 md:ml-2">Development Consultancy</span></h4>
-                      <p className="w-10/12 md:w-10/12 xl:w-10/12">Development is a complex process and we have achieved many successful projects to know the constraints and pitfalls to be aware of. We specialise in dentification of market facing uses, addressing site constraints, reviewing development principles, appraisals, cost consulting and funding. </p>
-                    </div>
+                          <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
+                          <NumberShape number={i + 3} />
 
-                    <div className="w-full border-b border-offblack  p-5 md:p-12 lg:p-16 xl:p-20">
-                    <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
-                      <NumberShape number="4" />
-
-                      <span className="inline-block ml-1 md:ml-2">Site Promotion / Planning</span></h4>
-                      <p className="w-10/12 md:w-10/12 xl:w-10/12">Feasibility studies, pre-app planning, planning strategies, application consultation and delivery. We have a large amount of experience in this area and have worked closely with the same consultants for many years. Our proven track record of delivering developments helps us identity how to promote sites effectively by unlocking the potential within land and building opportunities.</p>
-                    </div>
-
-                    <div className="w-full p-5 md:p-12 lg:p-16 xl:p-20">
-                    <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
-                      <NumberShape number="5" />
-
-                      <span className="inline-block ml-1 md:ml-2">Real Estate Advisory</span></h4>
-                      <p className="w-10/12 md:w-10/12 xl:w-10/12">A conclusive and profitable exit is just as important as achieving planning. Reform has tailored many property deals to fulfil this important part of the process, both with our own projects and those of clients. We work with agents throughout the UK to source opportunities for our clients and investors.</p>
-                    </div>
+                          <span className="inline-block ml-1 md:ml-2">{ heading }</span></h4>
+                          <div className="w-10/12 md:w-10/12 xl:w-10/12" dangerouslySetInnerHTML={{ __html: text }} />
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               </div>
@@ -147,10 +136,15 @@ export const query = graphql`
       title
       image {
         fluid(
-          maxWidth: 1900,
-          imgixParams: { w: "1900", h: "1121", sharp: 10 }) {
+          maxWidth: 2202,
+          imgixParams: { w: "2202", h: "1410", sharp: 7 }) {
           ...GatsbyDatoCmsFluid_noBase64
         }
+      }
+      heroText
+      whatWeDoBlocks {
+        heading
+        text
       }
       metaTags {
         title

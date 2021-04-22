@@ -85,7 +85,7 @@ class AboutPage extends React.Component {
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
             <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12  xl:pr-0">At Reform we thrive on <span className="italic">identifying</span> development opportunities both for ourselves &amp; with land owners not realising the true <span className="italic">potential</span> of their assets.</h1>
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12  xl:pr-0"><span className="tracking-tighter" dangerouslySetInnerHTML={{ __html: this.props.data.about.heroText }}/></h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
               </div> */}
@@ -108,7 +108,7 @@ class AboutPage extends React.Component {
                     <div className="p-8 md:p-12 xl:p-16">
                       <div className="lg:flex lg:flex-wrap items-start">
                         <NumberShape number="A" white />
-                        <p className="w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12 xl:text-lg pt-3 lg:pt-0 lg:pl-5">We enjoy transforming redundant sites and buildings to create an improved offering to the market. With our extensive and diverse experience we understand the whole development and planning process. We have a proven track record in delivering successful projects and would welcome discussing potential opportunities throughout the UK.</p>
+                        <div className="w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12 xl:text-lg pt-3 lg:pt-0 lg:pl-5" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
                       </div>
 
                       <div className="my-12 md:my-20 xl:my-32">
@@ -146,14 +146,6 @@ class AboutPage extends React.Component {
                           )
                         })}
                       </div>
-
-                      {/* <div className="mb-12 md:mb-16 xl:mb-24">
-                        <h3 className="w-full md:w-10/12 lg:w-9/12">REFORM is an experienced, <span className="italic">full-service</span> agency that provides a range of services for <span className="italic">modern</span> building design &amp; development.</h3>
-                        
-                        <p className="w-11/12 md:w-10/12 lg:w-9/12 xl:w-10/12 xl:text-lg pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in urna eget mi tristique malesuada. Aliquam eu est in neque feugiat sodales sed nec nibh. Duis quis commodo nisl. Aliquam a convallis orci. Integer mauris libero, tincidunt eget est congue, commodo malesuada enim. Integer congue commodo nibh, et cursus erat feugiat fermentum. Vestibulum vel faucibus elit, ut sollicitudin massa. Quisque pretium nec magna et blandit. Morbi eu nunc id nisl euismod egestas at ut velit.</p>
-
-                        <Link to="/contact" className="text-lg md:text-xl xl:text-2xl underline">Contact Us</Link>
-                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -185,10 +177,12 @@ export const query = graphql`
   query AboutQuery {
     about: datoCmsAbout {
       title
+      heroText
+      contentText
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { w: "1600", h: "1600", fit: "fillmax", crop: "center" }) {
+          imgixParams: { w: "1600", h: "1600", sharp: 8 , fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid
         }
       }
