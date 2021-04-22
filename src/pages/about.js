@@ -103,7 +103,7 @@ class AboutPage extends React.Component {
                 <div className="h-full">
                   <div className="mb-12 md:mb-16 xl:mb-24 relative z-30">
 
-                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative z-0 md:h-screen" />
+                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative z-0 md:h-screen will-change" />
 
                     <div className="p-8 md:p-12 xl:p-16">
                       <div className="lg:flex lg:flex-wrap items-start">

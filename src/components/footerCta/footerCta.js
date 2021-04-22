@@ -30,7 +30,7 @@ const FooterCta = ({ color }) => {
       <div className="bg-gradient-to-t w-full h-64 block from-black via-black to-transparent absolute bottom-0 left-0 right-0 z-10 opacity-75"></div>
 
       <div className="absolute inset-0 opacity-20 z-0">
-        <Img fluid={data.file.childImageSharp.fluid} alt="Footer Image" className="opacity-50 object-cover object-center w-full h-full" />
+        <Img fluid={data.file.childImageSharp.fluid} alt="Footer Image" className="opacity-50 object-cover object-center w-full h-full will-change" />
       </div>
 
       <div className="container relative z-20">
