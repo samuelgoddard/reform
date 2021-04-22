@@ -61,7 +61,7 @@ const IndexPage = ({ data: { home }, location}) => {
                     </div>
 
 
-                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-24"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-12"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
                   </div>
                 </div>
               </div>
