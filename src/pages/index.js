@@ -47,7 +47,7 @@ const IndexPage = ({ data: { home }, location}) => {
 
             <motion.div variants={fade} className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
               <div className="pb-12 md:pb-20 3xl:pb-32 bg-offwhitelight">
-                <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhitelight" />
+                <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhitelight will-change" />
 
                 <div className="flex flex-wrap">
                   <div className="flex-1 block">
@@ -61,12 +61,12 @@ const IndexPage = ({ data: { home }, location}) => {
                     </div>
 
 
-                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-12"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-16"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-wrap pb-6 md:pb-10 px-5 md:px-12 lg:px-16 xl:px-20">
+              <div className="flex flex-wrap pb-8 md:pb-16 xl:pb-20 px-5 md:px-12 lg:px-16 xl:px-20">
                 <div className="w-1/2">
                   <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                   <span className="inline-block transform rotate-90">↳</span> What We Do
@@ -89,14 +89,14 @@ const IndexPage = ({ data: { home }, location}) => {
                       <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="1" />
 
-                      <span className="inline-block">Architecture</span></h4>
+                      <span className="inline-block ml-1 md:ml-2">Architecture</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Our expertise in this area represents a key un-locker of value and underpins the business. Reform has its own, in-house, fully functioning architectural practice and can provide a full range of architectural services from inception through to completion. So whether we are acting for ourselves and our partners, or for third party clients in the traditional way, we can rapidly spot ways of releasing the commercial potential of a project owing to the decades of architectural experience of our team..</p>
                     </div>
                     <div className="w-full p-5 md:p-12 lg:p-16 xl:p-20 border-b border-offblack md:border-0">
                     <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="2" />
 
-                      <span className="inline-block">Development Delivery</span></h4>
+                      <span className="inline-block ml-1 md:ml-2">Development Delivery</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Partnering land owners to deliver sites which have been promoted through planning and ready for delivery. We employ our own key trades and site management. We also have a very reliable and long-standing relationship with a number of sub-contractors. Reform has the experience in delivery of many property asset classes including residential, HA, office and other commercial uses.</p>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const IndexPage = ({ data: { home }, location}) => {
                     <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="3" />
 
-                      <span className="inline-block">Development Consultancy</span></h4>
+                      <span className="inline-block ml-1 md:ml-2">Development Consultancy</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Development is a complex process and we have achieved many successful projects to know the constraints and pitfalls to be aware of. We specialise in dentification of market facing uses, addressing site constraints, reviewing development principles, appraisals, cost consulting and funding. </p>
                     </div>
 
@@ -113,7 +113,7 @@ const IndexPage = ({ data: { home }, location}) => {
                     <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="4" />
 
-                      <span className="inline-block">Site Promotion / Planning</span></h4>
+                      <span className="inline-block ml-1 md:ml-2">Site Promotion / Planning</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">Feasibility studies, pre-app planning, planning strategies, application consultation and delivery. We have a large amount of experience in this area and have worked closely with the same consultants for many years. Our proven track record of delivering developments helps us identity how to promote sites effectively by unlocking the potential within land and building opportunities.</p>
                     </div>
 
@@ -121,7 +121,7 @@ const IndexPage = ({ data: { home }, location}) => {
                     <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                       <NumberShape number="5" />
 
-                      <span className="inline-block">Real Estate Advisory</span></h4>
+                      <span className="inline-block ml-1 md:ml-2">Real Estate Advisory</span></h4>
                       <p className="w-10/12 md:w-10/12 xl:w-10/12">A conclusive and profitable exit is just as important as achieving planning. Reform has tailored many property deals to fulfil this important part of the process, both with our own projects and those of clients. We work with agents throughout the UK to source opportunities for our clients and investors.</p>
                     </div>
                   </div>

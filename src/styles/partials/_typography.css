@@ -23,6 +23,27 @@ h1, .h1 {
   }
 }
 
+.about-title {
+  @apply text-3xl leading-none tracking-tight;
+
+  @screen md {
+    font-size: 4.5vw;
+    @apply leading-none;
+  }
+  @screen lg {
+    font-size: 3.8vw;
+    @apply  leading-none;
+  }
+  @screen xl {
+    font-size: 3.2vw;
+    @apply  leading-none;
+  }
+  @screen 3xl {
+    font-size: 2.9vw;
+    @apply  leading-none;
+  }
+}
+
 h2, .h2 {
   @apply text-4xl leading-none tracking-tight;
 

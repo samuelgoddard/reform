@@ -90,3 +90,7 @@
 :-moz-placeholder { /* Firefox 18- */
   @apply text-black opacity-100 !important;
 }
+
+.will-change {
+  will-change: transform;
+}
