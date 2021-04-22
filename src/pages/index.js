@@ -136,8 +136,8 @@ export const query = graphql`
       title
       image {
         fluid(
-          maxWidth: 2202,
-          imgixParams: { w: "2202", h: "1410", sharp: 7 }) {
+          maxWidth: 2402,
+          imgixParams: { w: "2402", h: "1610", sharp: 15 }) {
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
