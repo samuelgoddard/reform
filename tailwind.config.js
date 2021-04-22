@@ -31,6 +31,9 @@ module.exports = {
         'sans': ['Freigeist', 'Helvetica', 'Arial', 'sans-serif'],
       },
       fontSize: {
+        '4xl': '2.55rem',
+        '5xl': '3.25rem',
+        '6xl': '4.25rem',
         '7xl': '8rem',
       },
       opacity: {

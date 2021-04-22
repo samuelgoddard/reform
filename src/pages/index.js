@@ -46,7 +46,7 @@ const IndexPage = ({ data: { home }, location}) => {
             </motion.div>
 
             <motion.div variants={fade} className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
-              <div className="pb-12 md:pb-20 bg-offwhitelight">
+              <div className="pb-12 md:pb-20 3xl:pb-32 bg-offwhitelight">
                 <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhitelight" />
 
                 <div className="flex flex-wrap">
@@ -54,14 +54,14 @@ const IndexPage = ({ data: { home }, location}) => {
                     <div className="w-full h-px bg-offblack mr-12"></div>
                   </div>
                   
-                  <div className="w-11/12 max-w-xl xl:max-w-3xl text-right ml-auto -mt-6 md:-mt-32 xl:-mt-56 px-5 md:px-8 xl:px-12 flex flex-wrap">
-                    <div className="ml-auto text-right w-auto">
+                  <div className="w-full md:max-w-lg xl:max-w-2xl 3xl:max-w-4xl text-right ml-auto -mt-6 md:-mt-48 xl:-mt-84 3xl:-mt-96 px-5 md:pr-8 xl:pr-12 flex flex-wrap">
+                    <div className="ml-auto text-right w-auto mb-3">
                       {/* <span className="flex items-center ml-auto text-right justify-center w-10 md:w-12 h-10 md:h-12 mb-4 md:mb-6 bg-offblack rounded-full text-white transform -skew-y-12 rotate-12 scale-x-75 text-lg md:text-2xl italic"><span className="transform block -rotate-6">R</span></span> */}
-
                       <NumberShape number="R" />
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl xl:text-5xl relative z-10 w-full block"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development.</h2>
+
+                    <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-24"><span className="italic uppercase">Reform</span> is an experienced, full-service agency that provides a range of services for <span className="italic">modern</span> building design &amp; development</h2>
                   </div>
                 </div>
               </div>

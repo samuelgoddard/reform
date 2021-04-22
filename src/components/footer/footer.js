@@ -26,7 +26,7 @@ const Footer = ({ color, hideCta }) => {
             Twitter
           </a>
           <span className="text-sm md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mx-auto text-center hidden xl:block">
-            Development done <span className="italic">differently</span>
+            Development done differently
           </span>
           <Link className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l`} to="/contact">
             Privacy <span className="hidden md:inline">Policy</span>
