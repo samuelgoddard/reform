@@ -99,13 +99,13 @@ const IndexPage = ({ data: { home }, location}) => {
               </div>
             </motion.div>
 
-            <div className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
+            <motion.div variants={fade} className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
               <div className="pb-12 md:pb-20 3xl:pb-32 bg-offwhitelight">
-                <motion.div variants={fadeHomeImage}>
+                <div>
                   <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhitelight will-change" />
-                </motion.div>
+                </div>
 
-                <motion.div variants={fade} className="flex flex-wrap">
+                <div className="flex flex-wrap">
                   <div className="flex-1 block">
                     <div className="w-full h-px bg-offblack mr-12"></div>
                   </div>
@@ -119,10 +119,10 @@ const IndexPage = ({ data: { home }, location}) => {
 
                     <h2 className="text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl relative z-10 w-full block 3xl:pl-16" dangerouslySetInnerHTML={{ __html:home.heroText }}></h2>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
-              <motion.div variants={fade} className="flex flex-wrap pb-8 md:pb-16 xl:pb-20 px-5 md:px-12 lg:px-16 xl:px-20">
+              <div  className="flex flex-wrap pb-8 md:pb-16 xl:pb-20 px-5 md:px-12 lg:px-16 xl:px-20">
                 <div className="w-1/2">
                   <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                   <span className="inline-block transform rotate-90">↳</span> What We Do
@@ -133,8 +133,8 @@ const IndexPage = ({ data: { home }, location}) => {
                   About Us
                 </Link>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
 
             <motion.div variants={fade} className="content bg-offwhite">
               <div className="">
