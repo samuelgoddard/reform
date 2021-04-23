@@ -94,3 +94,23 @@
 .will-change {
   will-change: transform;
 }
+
+
+/* .intro-motif {
+  stroke: #333333;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+} */
+
+
+.intro-motif {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 4.6s ease-in-out forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
