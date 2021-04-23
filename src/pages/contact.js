@@ -53,18 +53,73 @@ const ContactPage = ({ data: { contact }, location}) => {
             </motion.div>
 
             <motion.div variants={fade} className="md:col-span-8 xl:col-span-8 2xl:col-span-9 relative z-30 md:border-l border-black pb-24 md:pb-0">
-              <div className="max-w-4xl content relative h-full bg-red">                
+              <div className="max-w-6xl content relative h-full">                
                 <div className="p-6 md:p-16 xl:p-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
-                    <h1 className="h2 mb-8 md:mb-12 xl:mb-16">Looking for a partner for your next development?</h1>
+                    <h1 className="h2 mb-8 md:mb-12 xl:mb-16">
+                      <span className="overflow-hidden block">
+                      <motion.span
+                        initial={{ translateY: "100%" }}
+                        animate={{ translateY: 0 }}
+                        transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
+                        className="block">
+                        Looking for a partner for
+                      </motion.span>
+                      </span>
+                      <span className="overflow-hidden block">
+                        <motion.span
+                          initial={{ translateY: "100%" }}
+                          animate={{ translateY: 0 }}
+                          transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
+                          className="block">
+                          your next development?
+                        </motion.span>
+                      </span>
+                    </h1>
                     
                     <form className="block w-full max-w-xl">
-                      <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Name *" required />
-                      <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Email *" required />
-                      <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-3 md:mb-5" placeholder="Phone" required />
-                      <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-b-2 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block mb-6 md:mb-12" placeholder="Project Details" />
-
-                      <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block border-b border-black">Send Details</button>
+                      <span className="overflow-hidden block relative mb-3 md:mb-5">
+                        <motion.span
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
+                          transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
+                          className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
+                          <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
+                      </span>
+                      <span className="overflow-hidden block relative mb-3 md:mb-5">
+                        <motion.span
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
+                          transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
+                          className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
+                          <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
+                      </span>
+                      <span className="overflow-hidden block relative mb-3 md:mb-5">
+                        <motion.span
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
+                          transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                          className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
+                          <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
+                      </span>
+                      <span className="overflow-hidden block relative mb-6 md:mb-12">
+                        <motion.span
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
+                          transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
+                          className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
+                          <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
+                      </span>
+                      
+                      <span className="overflow-hidden block relative">
+                        <motion.span
+                          initial={{ translateY: "100%" }}
+                          animate={{ translateY: 0 }}
+                          transition={{ duration: 1, delay: 0.65, ease: [0.76, 0, 0.24, 1] }}
+                          className="block">
+                            <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block border-b border-black">Send Details</button>
+                        </motion.span>
+                      </span>
                     </form>
                   </div>
                 </div>

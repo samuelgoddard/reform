@@ -85,7 +85,89 @@ class AboutPage extends React.Component {
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
             <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12  xl:pr-0"><span className="tracking-tighter" dangerouslySetInnerHTML={{ __html: this.props.data.about.heroText }}/></h1>
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12 xl:pr-0">
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  At Reform we thrive
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  on <span className="italic">identifying</span> 
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  development
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  opportunities both
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  for ourselves &amp; with
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  land owners not
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  realising the true
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  potential of their
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ translateY: "100%" }}
+                    animate={{ translateY: 0 }}
+                    transition={{ duration: 1, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  assets.
+                  </motion.span>
+                </span>
+              </h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
               </div> */}

@@ -82,7 +82,7 @@ class Layout extends React.Component {
                         className="w-full h-px bg-black absolute bottom-0 left-0 right-0 z-10"></motion.div>
 
                     <div className="flex flex-wrap items-center">
-                      <span className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" activeClassName="nav--active" partiallyActive to="/about">
+                      <span className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" to="/about">
 
                         <motion.span 
                           initial={{ translateY: "100%" }}
@@ -132,7 +132,7 @@ class Layout extends React.Component {
                         </div>
                         
                       </span>
-                      <Link className="text-base md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite relative block overflow-hidden" activeClassName="nav--active" to="/contact">
+                      <Link className="text-base md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite relative block overflow-hidden" to="/contact">
 
                         <motion.span 
                           initial={{ translateY: "100%" }}
