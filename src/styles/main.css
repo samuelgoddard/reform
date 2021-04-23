@@ -104,8 +104,8 @@
 
 
 .intro-motif {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
   animation: dash 4.6s ease-in-out forwards;
 }
 
@@ -113,4 +113,10 @@
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.logo-mask-reveal {
+
+  width: 18%;
+  left: 45%;
 }
