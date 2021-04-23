@@ -19,15 +19,15 @@ const Header = ({ noLogo }) => (
             <div className="overflow-hidden w-24 md:w-64 lg:w-84">
               <Marquee velocity={0.04}>
                 Rethinking Development&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
               </Marquee>
             </div>
           </span>

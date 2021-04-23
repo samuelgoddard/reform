@@ -14,7 +14,7 @@ class Layout extends React.Component {
     super()
     this.state = {
       showIntro: true,
-      timing: 5.1,
+      timing: 5.5,
     }
   }
 
@@ -26,7 +26,7 @@ class Layout extends React.Component {
         showIntro: false,
         timing: 0
       })
-     }, 5500);
+     }, 5800);
   }
 
   render() {
@@ -49,12 +49,12 @@ class Layout extends React.Component {
           >
             <motion.div
               animate={{ y: "-100%" }}
-              transition={{ duration: 0.1, delay: 4.9, ease: [0.76, 0, 0.24, 1] }}
+              transition={{ duration: 0.1, delay: 5.35, ease: [0.76, 0, 0.24, 1] }}
               className="fixed w-full h-screen z-50"
             >
               <motion.div
                 animate={{ opacity: 0 }}
-                transition={{ duration: 1, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
+                transition={{ duration: 1.75, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
                 className="h-screen w-full z-40 bg-offwhite flex flex-wrap"
               >
                 <motion.div
@@ -71,7 +71,7 @@ class Layout extends React.Component {
                     <motion.div 
                       initial={{ translateY: 0 }}
                       animate={{ translateY: "-100%" }}
-                      transition={{ duration: 1, delay: 3, ease: [0.76, 0, 0.24, 1] }}
+                      transition={{ duration: 1, delay: 3.15, ease: [0.76, 0, 0.24, 1] }}
                       className="w-full h-10px bg-offwhite absolute top-0 left-0 right-0 z-10"></motion.div>
                       <div className="w-full h-10px bg-black relative z-0 absolute top-0 left-0 right-0 z-0"></div>
 
@@ -82,7 +82,7 @@ class Layout extends React.Component {
                         className="w-full h-px bg-black absolute bottom-0 left-0 right-0 z-10"></motion.div>
 
                     <div className="flex flex-wrap items-center">
-                      <Link className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" activeClassName="nav--active" partiallyActive to="/about">
+                      <span className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" activeClassName="nav--active" partiallyActive to="/about">
 
                         <motion.span 
                           initial={{ translateY: "100%" }}
@@ -93,7 +93,7 @@ class Layout extends React.Component {
                           <motion.span
                             initial={{ translateY: "100%" }}
                             animate={{ translateY: 0 }}
-                            transition={{ duration: 1, delay: 3.25, ease: [0.76, 0, 0.24, 1] }}
+                            transition={{ duration: 1, delay: 2.5, ease: [0.76, 0, 0.24, 1] }}
                             className="block">
                             About Us
                           </motion.span>
@@ -101,29 +101,29 @@ class Layout extends React.Component {
                         <span className="absolute bottom-0 left-0 right-0 w-full flex justify-start">
                           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>
                         </span>
-                      </Link>
-                      <Link className="block px-5 mx-auto" to="/">
+                      </span>
+                      <span className="block px-5 mx-auto" to="/">
                         <span className={`text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-4 md:-ml-20 lg:-ml-32 opacity-100`}>
                           <div className="overflow-hidden w-24 md:w-64 lg:w-84 mt-2 pt-px">
-                            <motion.span
-                              initial={{ translateY: "100%" }}
-                              animate={{ translateY: 0 }}
-                              transition={{ duration: 1.5, delay: 2.75, ease: [0.76, 0, 0.24, 1] }}
+                            {/* <motion.span
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              transition={{ duration: 0.75, delay: 2.75, ease: [0.76, 0, 0.24, 1] }}
                               className="block"
                             >
                               <Marquee velocity={0.04}>
                                 Rethinking Development&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
-                                &nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
+                                &bull;&nbsp;&nbsp;Rethinking Development&nbsp;&nbsp;
                               </Marquee>
-                            </motion.span>
+                            </motion.span> */}
                           </div>
                         </span>
 
@@ -131,7 +131,7 @@ class Layout extends React.Component {
                           <Logo />
                         </div>
                         
-                      </Link>
+                      </span>
                       <Link className="text-base md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite relative block overflow-hidden" activeClassName="nav--active" to="/contact">
 
                         <motion.span 
