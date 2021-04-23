@@ -92,7 +92,7 @@ const IndexPage = ({ data: { home }, location}) => {
                   <motion.div 
                     initial={{ x: "100%" }}
                     animate={{ x: "0" }}
-                    transition={{ duration: 2.65, ease: [0.76, 0, 0.24, 1] }}
+                    transition={{ duration: 2.45, ease: [0.76, 0, 0.24, 1] }}
                     className="w-full h-px bg-offblack ml-8">
                   </motion.div>
                 </div>

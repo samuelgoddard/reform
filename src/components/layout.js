@@ -71,7 +71,7 @@ class Layout extends React.Component {
                     <motion.div 
                       initial={{ translateY: 0 }}
                       animate={{ translateY: "-100%" }}
-                      transition={{ duration: 1, delay: 3.15, ease: [0.76, 0, 0.24, 1] }}
+                      transition={{ duration: 1, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
                       className="w-full h-10px bg-offwhite absolute top-0 left-0 right-0 z-10"></motion.div>
                       <div className="w-full h-10px bg-black relative z-0 absolute top-0 left-0 right-0 z-0"></div>
 
@@ -87,7 +87,7 @@ class Layout extends React.Component {
                         <motion.span 
                           initial={{ translateY: "100%" }}
                           animate={{ translateY: 0 }}
-                          transition={{ duration: 1.5, delay: 2.25, ease: [0.76, 0, 0.24, 1] }}
+                          transition={{ duration: 1.5, delay: 2.65, ease: [0.76, 0, 0.24, 1] }}
                           className="block absolute top-0 right-0 bottom-0 w-px h-full bg-black"></motion.span>
                         <span className="overflow-hidden block">
                           <motion.span
