@@ -88,8 +88,8 @@ class AboutPage extends React.Component {
               <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12 xl:pr-0">
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   At Reform we thrive
@@ -97,8 +97,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   on <span className="italic">identifying</span> 
@@ -106,8 +106,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   development
@@ -115,8 +115,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   opportunities both
@@ -124,8 +124,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   for ourselves &amp; with
@@ -133,8 +133,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   land owners not
@@ -142,8 +142,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   realising the true
@@ -151,8 +151,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   potential of their
@@ -160,8 +160,8 @@ class AboutPage extends React.Component {
                 </span>
                 <span className="overflow-hidden block">
                   <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
                   assets.
