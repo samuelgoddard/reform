@@ -120,3 +120,13 @@
   width: 18%;
   left: 45%;
 }
+
+.lineParent {
+  overflow: hidden;
+  display: block;
+}
+
+.grayimage {
+  filter:grayscale(0%);
+  -webkit-filter:grayscale(0%);
+}

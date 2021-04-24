@@ -10,10 +10,11 @@ import LocomotiveScroll from "locomotive-scroll"
 // import Motif from "../components/motif"
 import Img from "gatsby-image"
 import { gsap, Power2 } from 'gsap';
+import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scroll } from "../theme"
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 class AboutPage extends React.Component {
   componentDidMount() {
@@ -41,34 +42,54 @@ class AboutPage extends React.Component {
 
     let revealContainers = document.querySelectorAll(".scrollreveal");
 
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineParent" })
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineParent" });
+
     revealContainers.forEach((container) => {
-      let inner = container.querySelector(".textreveal");
-      let box = container.querySelector(".boxreveal");
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: 'top bottom',
-          end: 'bottom top',
-          scroller: "#scroll-container",
-          toggleActions: "play none none reset"
-        }
+      let inner = container.querySelectorAll(".lineChild");
+
+      let grayImages = container.querySelectorAll(".grayimage");
+
+      const anim = gsap.from(inner, {
+        yPercent: 100,
+        autoAlpha: 0,
+        delay: -1.5,
+        duration: 0.5,
+        stagger: 0.045,
+        ease: Power2.out,
+        paused: true
+      });
+
+      ScrollTrigger.create({
+        trigger: container,
+        start: '200 bottom',
+        scroller: "#scroll-container",
+        onEnter: () => anim.restart()
+      }); 
+      
+      ScrollTrigger.create({
+        trigger: container,
+        start: '-50px bottom',
+        scroller: "#scroll-container",
+        onLeaveBack: () => anim.pause(0)
       });
     
-      // tl.set(container, { autoAlpha: 1 });
-      // tl.from(container, 1.5, {
-      //   xPercent: -100,
-      //   ease: Power2.out
-      // });
-      tl.from(inner, 0.65, {
-        yPercent: 100,
-        delay: -1.5,
-        ease: Power2.out
-      });
-      tl.from(box, 1, {
-        height: "100%",
-        delay: -1.5,
-        ease: Power2.out
-      });
+      const animImages = gsap.from(grayImages, {
+        scrollTrigger:{
+          trigger: container,
+          scroller: "#scroll-container",
+          scrub: 0.85,
+          start: 'center center',
+          end:'center center',
+        },
+        duration: 1,
+        opacity: 0,
+        css: { 'filter': 'grayscale(100%)','-webkit-filter': 'grayscale(100%)' },
+        ease: Power2.out,
+        paused: true
+      })
     });
 
   }
@@ -206,9 +227,8 @@ class AboutPage extends React.Component {
                     <div className="p-8 md:p-12 xl:p-16">
                       <div className="lg:flex lg:flex-wrap items-start">
                         <NumberShape number="A" white />
-                        <div className="relative overflow-hidden scrollreveal w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12">
-                          <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal"></div>
-                          <div className=" xl:text-lg pt-3 lg:pt-0 lg:pl-5" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
+                        <div className="scrollreveal w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12">
+                          <div className="xl:text-lg pt-3 lg:pt-0 lg:pl-5 textrevealContent" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
                         </div>
                       </div>
 
@@ -219,7 +239,7 @@ class AboutPage extends React.Component {
                               <Link className="block relative" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal block z-20"></div>
-                                  <Img fluid={ node.image.fluid } className="w-full h-auto mb-0 pb-0 block" />
+                                  <Img fluid={ node.image.fluid } className="w-full h-auto mb-0 pb-0 block grayimage" />
                                 </div>
                                 <div className="pb-5 mb-5 relative z-30">
                                   <span className="overflow-hidden block scrollreveal mb-1">
@@ -245,12 +265,7 @@ class AboutPage extends React.Component {
                           <h3 className="mb-12 md:mb-16 xl:mb-24">
                             <span className="overflow-hidden block scrollreveal">
                               <span className="textreveal block">
-                                An experienced
-                              </span>
-                            </span>
-                            <span className="overflow-hidden block scrollreveal">
-                              <span className="textreveal block">
-                                team
+                                An experienced<br/>team
                               </span>
                             </span>
                           </h3>
@@ -278,9 +293,8 @@ class AboutPage extends React.Component {
                                 )}
                               </div>
                               
-                              <div className="relative overflow-hidden scrollreveal w-10/12">
-                                <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal"></div>
-                                <div className="xl:text-lg" dangerouslySetInnerHTML={{ __html: node.bio }}></div>
+                              <div className="scrollreveal">
+                                <div className="xl:text-lg w-10/12 textrevealContent" dangerouslySetInnerHTML={{ __html: node.bio }}></div>
                               </div>
 
                             </motion.div>
