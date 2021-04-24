@@ -59,8 +59,8 @@ const ContactPage = ({ data: { contact }, location}) => {
                     <h1 className="h2 mb-8 md:mb-12 xl:mb-16">
                       <span className="overflow-hidden block">
                       <motion.span
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
+                        initial={{ translateY: "100%" }}
+                        animate={{ translateY: 0 }}
                         transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
                         className="block">
                         Looking for a partner for
@@ -68,8 +68,8 @@ const ContactPage = ({ data: { contact }, location}) => {
                       </span>
                       <span className="overflow-hidden block">
                         <motion.span
-                          initial={{ y: "100%" }}
-                          animate={{ y: 0 }}
+                          initial={{ translateY: "100%" }}
+                          animate={{ translateY: 0 }}
                           transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
                           className="block">
                           your next development?
@@ -80,32 +80,32 @@ const ContactPage = ({ data: { contact }, location}) => {
                     <form className="block w-full max-w-xl">
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
-                          initial={{ x: "-100%" }}
-                          animate={{ x: 0 }}
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
                           <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
-                          initial={{ x: "-100%" }}
-                          animate={{ x: 0 }}
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
                           <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
-                          initial={{ x: "-100%" }}
-                          animate={{ x: 0 }}
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
                           <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
                       </span>
                       <span className="overflow-hidden block relative mb-6 md:mb-12">
                         <motion.span
-                          initial={{ x: "-100%" }}
-                          animate={{ x: 0 }}
+                          initial={{ translateX: "-100%" }}
+                          animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
                           <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
@@ -113,8 +113,8 @@ const ContactPage = ({ data: { contact }, location}) => {
                       
                       <span className="overflow-hidden block relative">
                         <motion.span
-                          initial={{ y: "100%" }}
-                          animate={{ y: 0 }}
+                          initial={{ translateY: "100%" }}
+                          animate={{ translateY: 0 }}
                           transition={{ duration: 1, delay: 0.65, ease: [0.76, 0, 0.24, 1] }}
                           className="block">
                             <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block border-b border-black">Send Details</button>
