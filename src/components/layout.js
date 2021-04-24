@@ -49,12 +49,12 @@ class Layout extends React.Component {
           >
             <motion.div
               animate={{ y: "-100%" }}
-              transition={{ duration: 0.1, delay: 5.35, ease: [0.76, 0, 0.24, 1] }}
+              transition={{ duration: 0.1, delay: 5, ease: [0.76, 0, 0.24, 1] }}
               className="fixed w-full h-screen z-50"
             >
               <motion.div
                 animate={{ opacity: 0 }}
-                transition={{ duration: 1.75, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
+                transition={{ duration: 1.25, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
                 className="h-screen w-full z-40 bg-offwhite flex flex-wrap"
               >
                 <motion.div
