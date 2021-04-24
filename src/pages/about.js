@@ -39,22 +39,38 @@ class AboutPage extends React.Component {
       pinType: document.querySelector("#scroll-container").style.transform ? "transform" : "fixed"
     });
 
-    gsap.from(".motif", {
-      scrollTrigger:{
-        trigger: ".motif",
-        scroller: "#scroll-container",
-        scrub: 0.85,
-        start: 'top bottom',
-        end:'+=10000',
-      },
-      // rotationX:-180 * 2,
-      rotationY: -180 * 2,
-      // rotationZ:-180 * 2,
-      scale: 1,
-      duration:1,
-      ease: Power2.easeInOut,
-      transformOrigin: "center center"
+    let revealContainers = document.querySelectorAll(".scrollreveal");
+
+    revealContainers.forEach((container) => {
+      let inner = container.querySelector(".textreveal");
+      let box = container.querySelector(".boxreveal");
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom',
+          end: 'bottom top',
+          scroller: "#scroll-container",
+          toggleActions: "play none none reset"
+        }
+      });
+    
+      // tl.set(container, { autoAlpha: 1 });
+      // tl.from(container, 1.5, {
+      //   xPercent: -100,
+      //   ease: Power2.out
+      // });
+      tl.from(inner, 0.65, {
+        yPercent: 100,
+        delay: -1.5,
+        ease: Power2.out
+      });
+      tl.from(box, 1, {
+        height: "100%",
+        delay: -1.5,
+        ease: Power2.out
+      });
     });
+
   }
 
   componentWillUnmount() {
@@ -190,18 +206,33 @@ class AboutPage extends React.Component {
                     <div className="p-8 md:p-12 xl:p-16">
                       <div className="lg:flex lg:flex-wrap items-start">
                         <NumberShape number="A" white />
-                        <div className="w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12 xl:text-lg pt-3 lg:pt-0 lg:pl-5" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
+                        <div className="relative overflow-hidden scrollreveal w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12">
+                          <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal"></div>
+                          <div className=" xl:text-lg pt-3 lg:pt-0 lg:pl-5" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
+                        </div>
                       </div>
 
                       <div className="my-12 md:my-20 xl:my-32">
                         {this.props.data.projects.edges.map(({ node }, i) => {
                           return (
                             <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16 mx-auto" key={i}>
-                              <Link className="block" to={`/about/${node.slug}`}>
-                                <Img fluid={ node.image.fluid } className="w-full mb-5 h-auto" />
-                                <div className="pb-5 mb-5">
-                                  <h4 className="mb-1 block text-center">{ node.title }</h4>
-                                  <span className="text-base block italic text-center">{ node.location }</span>
+                              <Link className="block relative" to={`/about/${node.slug}`}>
+                                <div className="overflow-hidden mb-5 scrollreveal">
+                                  <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal block z-20"></div>
+                                  <Img fluid={ node.image.fluid } className="w-full h-auto mb-0 pb-0 block" />
+                                </div>
+                                <div className="pb-5 mb-5 relative z-30">
+                                  <span className="overflow-hidden block scrollreveal mb-1">
+                                    <span className="textreveal block">
+                                      <h4 className="mb-0 block text-center">{ node.title }</h4>
+                                    </span>
+                                  </span>
+
+                                  <span className="overflow-hidden block scrollreveal">
+                                    <span className="textreveal block">
+                                      <span className="text-base block italic text-center">{ node.location }</span>
+                                    </span>
+                                  </span>
                                 </div>
                               </Link>
                             </motion.div>
@@ -209,20 +240,48 @@ class AboutPage extends React.Component {
                         })}
                       </div>
                     
-                      <div className="my-12 md:my-16 xl:my-24">
-                        <h3 className="mb-12 md:mb-16 xl:mb-24">An experienced<br/>team</h3>
+                      <div className="my-12 md:my-16 xl:my-24">                        
+                        <div className="my-12 md:my-16 xl:my-24">
+                          <h3 className="mb-12 md:mb-16 xl:mb-24">
+                            <span className="overflow-hidden block scrollreveal">
+                              <span className="textreveal block">
+                                An experienced
+                              </span>
+                            </span>
+                            <span className="overflow-hidden block scrollreveal">
+                              <span className="textreveal block">
+                                team
+                              </span>
+                            </span>
+                          </h3>
+                        </div>
+
+
                         {this.props.data.team.edges.map(({ node }, i) => {
                           return (
                             <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
                               {/* <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" /> */}
                               <div className="flex items-center border-b border-offwhite pb-5 mb-5">
-                                <h4 className="mb-0 pb-0">{ node.firstName } <span className="italic">{ node.secondName }</span></h4>
+                                <h4 className="mb-0 pb-0">
+                                  <span className="overflow-hidden block scrollreveal">
+                                    <span className="textreveal block">
+                                      { node.firstName } <span className="italic">{ node.secondName }</span>
+                                    </span>
+                                  </span>
+                                </h4>
                                 { node.jobTitle && (
-                                  <span className="ml-auto italic">{ node.jobTitle }</span>
+                                  <span className="ml-auto overflow-hidden block scrollreveal">
+                                    <span className="textreveal block">
+                                      <span className=" italic">{ node.jobTitle }</span>
+                                    </span>
+                                  </span>
                                 )}
                               </div>
-
-                              <div className="w-10/12 xl:text-lg" dangerouslySetInnerHTML={{ __html: node.bio }}></div>
+                              
+                              <div className="relative overflow-hidden scrollreveal w-10/12">
+                                <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal"></div>
+                                <div className="xl:text-lg" dangerouslySetInnerHTML={{ __html: node.bio }}></div>
+                              </div>
 
                             </motion.div>
                           )
