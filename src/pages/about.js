@@ -49,9 +49,8 @@ class AboutPage extends React.Component {
 
     revealContainers.forEach((container) => {
       let inner = container.querySelectorAll(".lineChild");
-
       let grayImages = container.querySelectorAll(".grayimage");
-
+      
       const anim = gsap.from(inner, {
         yPercent: 100,
         autoAlpha: 0,
@@ -75,21 +74,28 @@ class AboutPage extends React.Component {
         scroller: "#scroll-container",
         onLeaveBack: () => anim.pause(0)
       });
-    
-      const animImages = gsap.from(grayImages, {
-        scrollTrigger:{
-          trigger: container,
-          scroller: "#scroll-container",
-          scrub: 0.85,
-          start: 'center center',
-          end:'center center',
-        },
-        duration: 1,
+
+      const animGrayImages = gsap.from(grayImages, {
         opacity: 0,
-        css: { 'filter': 'grayscale(100%)','-webkit-filter': 'grayscale(100%)' },
+        delay: -1.5,
+        duration: 0.75,
         ease: Power2.out,
         paused: true
-      })
+      });
+
+      ScrollTrigger.create({
+        trigger: container,
+        start: '200 bottom',
+        scroller: "#scroll-container",
+        onEnter: () => animGrayImages.restart()
+      }); 
+      
+      ScrollTrigger.create({
+        trigger: container,
+        start: '-50px bottom',
+        scroller: "#scroll-container",
+        onLeaveBack: () => animGrayImages.pause(0)
+      });
     });
 
   }
@@ -236,10 +242,11 @@ class AboutPage extends React.Component {
                         {this.props.data.projects.edges.map(({ node }, i) => {
                           return (
                             <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16 mx-auto" key={i}>
-                              <Link className="block relative" to={`/about/${node.slug}`}>
+                              <Link className="block relative group" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
-                                  <div className="absolute bottom-0 left-0 right-0 h-0 bg-gradient-to-t from-black via-black to-transparent boxreveal block z-20"></div>
-                                  <Img fluid={ node.image.fluid } className="w-full h-auto mb-0 pb-0 block grayimage" />
+                                  <div className="overflow-hidden grayimage">
+                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110" />
+                                  </div>
                                 </div>
                                 <div className="pb-5 mb-5 relative z-30">
                                   <span className="overflow-hidden block scrollreveal mb-1">
