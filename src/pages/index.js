@@ -101,7 +101,12 @@ const IndexPage = ({ data: { home }, location}) => {
 
             <motion.div variants={fade} className="mt-5 md:-mt-4 xl:-mt-8 border-b border-black relative z-0">
               <div className="pb-12 md:pb-20 3xl:pb-32 bg-offwhitelight">
-                <div>
+                <div className="relative lg:-mt-12">
+
+                  <div className="flex-wrap absolute top-0 left-0 hero-image-tagline hidden lg:flex">
+                    <span className="block ml-5 leading-tight">Helping to transform the landscape of property development</span>
+                  </div>
+
                   <Img fluid={ home.image.fluid } className="w-full home-image bg-offwhitelight will-change" />
                 </div>
 

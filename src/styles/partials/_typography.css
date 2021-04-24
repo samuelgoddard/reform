@@ -106,6 +106,14 @@ h4, .h4 {
   }
 }
 
+
+.hero-image-tagline {
+  margin-left: 9%;
+  margin-top: 7.5%;
+  font-size: 1.35vw;
+  width: 17%;
+}
+
 /* Link */
 .link {
   @apply text-offblack underline transition;

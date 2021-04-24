@@ -19,7 +19,7 @@ module.exports = {
         'spin-slow': 'spin 24s linear infinite',
       },
       borderWidth: {
-        '10': '10px',
+        '10': '5px',
       },
       colors: {
         'black': '#1F1F1F',
@@ -60,7 +60,7 @@ module.exports = {
       },
       spacing: {
         '2px': '2px',
-        '10px': '10px',
+        '10px': '5px',
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
