@@ -20,8 +20,6 @@ class IndexPage extends React.Component {
   componentDidMount() {
 
     // let revealContainers = document.querySelectorAll(".scrollreveal");
-
-  
     new SplitText(".textrevealnonescrollContent > *", { type: "lines", linesClass: "lineChildNonScroll" });
     new SplitText(".textrevealnonescrollContent > *", { type: "lines", linesClass: "lineParentNonScroll" })
     new SplitText(".textrevealnonescroll", { type: "lines", linesClass: "lineChildNonScroll" });
@@ -68,10 +66,10 @@ class IndexPage extends React.Component {
     // });
   }
 
-  componentWillUnmount() {
-    window.scroll.update();
-    window.scroll.destroy();
-  }
+  // componentWillUnmount() {
+  //   window.scroll.update();
+  //   window.scroll.destroy();
+  // }
 
   render() {
 

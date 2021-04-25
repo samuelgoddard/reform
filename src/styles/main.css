@@ -126,11 +126,13 @@
   display: block;
 }
 
+
+/*! purgecss start ignore */
 .about-image-teaser {
   .grayimage {
     @apply transition-all ease-in-out duration-700;
     
-    opacity: 50%;
+    opacity: 0.5;
     filter:grayscale(100%);
     -webkit-filter:grayscale(100%);
   }
@@ -144,7 +146,6 @@
   }
 }
 
-/* Slider */
 .slick-slider
 {
     position: relative;
@@ -270,3 +271,4 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+/*! purgecss end ignore */
