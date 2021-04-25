@@ -40,8 +40,8 @@ export default class Carousel extends Component {
         <div className="border-t border-b border-black w-full flex flex-wrap items-center order-1 md:order-2 md:mb-6">
           <div className="flex flex-wrap items-center w-full px-4 md:px-0">
             <div className="w-auto pt-2">
-              <span className="block uppercase text-xs leading-none">{ this.props.location }</span>
-              <span className="block md:text-lg xl:text-xl">{this.props.title}</span>
+              <span className="block uppercase text-xs leading-none textreveal">{ this.props.location }</span>
+              <span className="block md:text-lg xl:text-xl textreveal">{this.props.title}</span>
             </div>
 
             <div className="w-auto ml-auto border-l md:border-none border-black h-full py-3 md:py-4 pl-2">

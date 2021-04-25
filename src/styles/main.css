@@ -121,7 +121,7 @@
   left: 45%;
 }
 
-.lineParent {
+.lineParent, .lineParentNonScroll {
   overflow: hidden;
   display: block;
 }

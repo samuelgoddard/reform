@@ -9,8 +9,32 @@ import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
 import NumberShape from "../components/numberShape"
 // import Img from "gatsby-image"
+import { gsap, Power2 } from 'gsap';
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
+const { useEffect } = React;
 
 const ProjectPage = ({ data: { project }, location}) => {
+  
+  useEffect(() => {
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineParent" })
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineParent" });
+
+    let inner = document.querySelectorAll(".lineChild");
+
+    gsap.from(inner, {
+      yPercent: 100,
+      autoAlpha: 0,
+      delay: 0.5,
+      duration: 0.5,
+      stagger: 0.045,
+      ease: Power2.out,
+    });
+  }, []);
+
   return (
     <>
       <SEO
@@ -45,17 +69,24 @@ const ProjectPage = ({ data: { project }, location}) => {
               <div className="max-w-4xl content relative h-full md:min-h-screen md:max-h-screen">
                 <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:min-h-screen md:max-h-screen md:pt-32">
 
-                  <div className="self-start border-t border-b border-black w-full py-5 mb-8 md:mb-0 md:-mt-6 xl:-mt-4 hidden md:block">
-                    <Link to="/about/" className="text-base md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-8">
-                      <span className="inline-block transform rotate-180">↳</span> Back to all
+                  <div className="self-start border-t border-b border-black w-full py-5 mb-8 md:mb-0 md:-mt-6 xl:-mt-4 hidden md:block md:mx-5">
+                    <Link to="/about/" className="text-base md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-2 group">
+                      <span className="inline-block transform rotate-180 leading-none align-top mr-1">↳</span> 
+                      
+                      <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
+                        <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                          <span className="block transform translate">Back to all</span>
+                          <span className="hidden md:block">Back to all</span>
+                        </span>
+                      </span>
                     </Link>
                   </div>
                   
                   <div className="w-full self-end pl-4 md:pl-6 pr-6 md:pr-10 pt-10">
                     <NumberShape number="1" />
-                    <h1 className="h3 mb-4 md:mb-6 max-w-sm block">{ project.title }</h1>
+                    <h1 className="h3 mb-4 md:mb-6 max-w-sm block textreveal">{ project.title }</h1>
 
-                    <div className=" max-w-sm hidden md:block" dangerouslySetInnerHTML={{ __html: project.content }}></div>
+                    <div className="max-w-sm hidden md:block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
                   </div>
                 </div>
               </div>
