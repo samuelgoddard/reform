@@ -95,14 +95,14 @@ class Layout extends React.Component {
                             animate={{ translateY: 0 }}
                             transition={{ duration: 1, delay: 2.5, ease: [0.76, 0, 0.24, 1] }}
                             className="block">
-                            About Us
+                            <span className="">About <span className="hidden xs:inline-block">Us</span></span>
                           </motion.span>
                         </span>
                         <span className="absolute bottom-0 left-0 right-0 w-full flex justify-start">
                           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>
                         </span>
                       </span>
-                      <span className="block px-5 mx-auto" to="/">
+                      <span className="block px-2 xs:px-5 mx-auto" to="/">
                         <span className={`text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-4 md:-ml-20 lg:-ml-32 opacity-100`}>
                           <div className="overflow-hidden w-24 md:w-64 lg:w-84 mt-2 pt-px">
                             {/* <motion.span

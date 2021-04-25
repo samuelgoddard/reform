@@ -24,7 +24,7 @@ const ProjectPage = ({ data: { project }, location}) => {
       <div className="">
         <motion.section
           initial="initial"
-          className="w-full md:min-h-screen max-h-screen bg-offwhitelight"
+          className="w-full md:min-h-screen md:max-h-screen bg-offwhitelight"
           animate="enter"
           exit="exit"
         >
@@ -33,7 +33,7 @@ const ProjectPage = ({ data: { project }, location}) => {
 
             <motion.div variants={fade} className="w-full md:w-7/12 2xl:w-8/12 pt-6 md:pt-10 md:px-6 md:pr-0 xl:pt-12 mb-0 md:mb-0 order-2 md:order-1">
               <div className="flex flex-col w-full h-full">
-                <Img fluid={project.image.fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" />
+                <Img fluid={project.image[0].fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" />
 
                 <div className="border-t border-b border-black w-full md:mb-6 flex flex-wrap items-center order-1 md:order-2">
                   <div className="flex flex-wrap items-center w-full px-4 md:px-0">
@@ -62,8 +62,8 @@ const ProjectPage = ({ data: { project }, location}) => {
             </motion.div>
 
             <motion.div variants={fade} className="w-full md:w-5/12 2xl:w-4/12 relative z-30 h-full md:min-h-screen md:max-h-screen order-1 md:order-2 pt-12 md:pt-0">
-              <div className="max-w-4xl content relative h-full md:min-h-screen max-h-screen">
-                <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:min-h-screen max-h-screen md:pt-32">
+              <div className="max-w-4xl content relative h-full md:min-h-screen md:max-h-screen">
+                <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:min-h-screen md:max-h-screen md:pt-32">
 
                   <div className="self-start border-t border-b border-black w-full py-5 mb-8 md:mb-0 md:-mt-6 xl:-mt-4 hidden md:block">
                     <Link to="/about/" className="text-base md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-8">

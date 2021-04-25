@@ -10,8 +10,8 @@ const Header = ({ noLogo }) => (
       <Link className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offblack relative overflow-hidden group" activeClassName="nav--active" partiallyActive to="/about">
         <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
           <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
-            <span className="block transform translate">About Us</span>
-            <span className="hidden md:block">About Us</span>
+            <span className="block transform translate">About <span className="hidden xs:inline-block">Us</span></span>
+            <span className="hidden md:block">About <span className="hidden xs:inline-block">Us</span></span>
           </span>
           
         </span>
@@ -19,7 +19,7 @@ const Header = ({ noLogo }) => (
           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>
         </span>
       </Link>
-      <Link className="block px-5 mx-auto" to="/">
+      <Link className="block px-2 xs:px-5 mx-auto" to="/">
         
           <span className={`text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-4 md:-ml-20 lg:-ml-32 ${noLogo ? 'opacity-100' : ' opacity-0' }`}>
             <div className="overflow-hidden w-24 md:w-64 lg:w-84">
@@ -47,7 +47,7 @@ const Header = ({ noLogo }) => (
             </div>
           </span>
         
-          <div className={`w-24 md:w-32 xl:w-40 transition ease-in-out duration-1000 ${noLogo ? 'opacity-0 ' : 'opacity-100' }`}>
+          <div className={`w-20 xs:w-24 md:w-32 xl:w-40 transition ease-in-out duration-1000 ${noLogo ? 'opacity-0 ' : 'opacity-100' }`}>
             <Logo />
           </div>
         
