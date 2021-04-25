@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import Footer from "../components/footer/footer"
+import Carousel from "../components/carousel"
 import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 import { motion } from 'framer-motion'
@@ -24,40 +25,19 @@ const ProjectPage = ({ data: { project }, location}) => {
       <div className="">
         <motion.section
           initial="initial"
-          className="w-full md:min-h-screen md:max-h-screen bg-offwhitelight"
+          className="w-full md:min-h-screen md:max-h-screen bg-offwhitelight relative"
           animate="enter"
           exit="exit"
         >
-          <div className="flex flex-wrap relative h-full">
-            {/* <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div> */}
+          {/* <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane-project"></div> */}
+          <div className="flex flex-wrap relative md:h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
 
             <motion.div variants={fade} className="w-full md:w-7/12 2xl:w-8/12 md:px-6 md:pr-0 pt-6 md:pt-10 xl:pt-12 order-2 md:order-1">
               <div className="flex flex-col w-full h-full">
-                <Img fluid={project.image[0].fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" />
+                {/* <Img fluid={project.image[0].fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" /> */}
 
-                <div className="border-t border-b border-black w-full flex flex-wrap items-center order-1 md:order-2 md:mb-6">
-                  <div className="flex flex-wrap items-center w-full px-4 md:px-0">
-                    <div className="w-auto pt-2">
-                      <span className="block uppercase text-xs leading-none">Location</span>
-                      <span className="block md:text-lg xl:text-xl">{project.location}</span>
-                    </div>
+                <Carousel images={project.image} location={project.location} title={project.title} />
 
-                    <div className="w-auto ml-auto border-l md:border-none border-black h-full py-3 md:py-4 pl-2">
-                      <div className="flex flex-wrap items-center">
-                        <span className="hidden md:block md:text-lg">1/18</span>
-                        <div className="flex ml-3">
-                          <button className="focus:outline-none hover:outline-none flex items-center justify-center w-8 md:w-12 h-8 md:h-12 rounded-full border border-black leading-none text-2xl mx-1 transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-3" viewBox="0 0 16.01 18.144"><path d="M0 6.404l6.4-6.4 1.52 1.511-3.832 3.821H16.01v12.808h-2.135V7.471H4.088l3.832 3.821-1.516 1.516z" fill="currentColor"/></svg>
-                          </button>
-
-                          <button className="focus:outline-none hover:outline-none flex items-center justify-center w-8 md:w-12 h-8 md:h-12 rounded-full border border-black leading-none text-2xl mx-1 transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-3" viewBox="0 0 16.01 18.144"><path d="M16.01 6.4L9.606 0 8.09 1.516l3.832 3.821H0v12.807h2.135V7.471h9.787L8.09 11.292l1.516 1.516z" fill="currentColor"/></svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
