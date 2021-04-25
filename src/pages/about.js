@@ -76,8 +76,8 @@ class AboutPage extends React.Component {
       });
 
       const animGrayImages = gsap.from(grayImages, {
-        opacity: 0,
-        delay: -1.5,
+        autoAlpha: 0,
+        delay: 0,
         duration: 0.75,
         ease: Power2.out,
         paused: true
@@ -128,7 +128,7 @@ class AboutPage extends React.Component {
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
             <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative z-10 about-title md:w-10/12 xl:w-8/12 xl:pr-0">
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0">
                 <span className="overflow-hidden block">
                   <motion.span
                     initial={{ translateY: "100%" }}
@@ -216,21 +216,24 @@ class AboutPage extends React.Component {
               </div> */}
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative z-30">
+            <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative">
               <div className="content relative" id="content-pane">
-                
-                {/* z-30 here */}
-                {/* <div className="relative z-30 h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
-                  <div className="bg-gradient-to-t w-full h-56 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-red-500 z-50"></div>
-                </div> */}
                 
                 {/* <div className="h-full about-content"> */}
                 <div className="h-full">
-                  <div className="mb-12 md:mb-16 xl:mb-24 relative z-30">
+                  {/* z-30 here */}
 
-                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative z-0 md:h-screen will-change" />
+                  <div className="mb-12 md:mb-16 xl:mb-24">
 
-                    <div className="p-8 md:p-12 xl:p-16">
+                    {/* <div className="h-screen z-50" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
+                      <div className="w-full h-56 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-red-500 z-50"></div>
+                    </div> */}
+
+                    {/* <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change md:-mt-100vh" /> */}
+
+                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change" />
+
+                    <div className="p-8 md:p-12 xl:p-16 relative z-30">
                       <div className="lg:flex lg:flex-wrap items-start">
                         <NumberShape number="A" white />
                         <div className="scrollreveal w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12">
@@ -245,10 +248,10 @@ class AboutPage extends React.Component {
                               <Link className="block relative group" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="overflow-hidden grayimage">
-                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110" />
+                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110 scale-105" />
                                   </div>
                                 </div>
-                                <div className="pb-5 mb-5 relative z-30">
+                                <div className="pb-5 mb-5 relative">
                                   <span className="overflow-hidden block scrollreveal mb-1">
                                     <span className="textreveal block">
                                       <h4 className="mb-0 block text-center">{ node.title }</h4>
@@ -281,7 +284,7 @@ class AboutPage extends React.Component {
 
                         {this.props.data.team.edges.map(({ node }, i) => {
                           return (
-                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16" key={i}>
+                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16 relative" key={i}>
                               {/* <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" /> */}
                               <div className="flex items-center border-b border-offwhite pb-5 mb-5">
                                 <h4 className="mb-0 pb-0">

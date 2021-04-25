@@ -42,7 +42,14 @@ const FooterCta = ({ color }) => {
             </div>
             <h2 className="max-w-4xl mx-auto mb-8 md:mb-12">Looking for a <span className="italic">partner</span> for your next development?</h2>
 
-            <Link to="/contact" className={ colorBorderClasses + `text-base md:text-lg xl:text-xl uppercase text-center inline-block mx-auto font-medium border-b-2`}>Get in touch</Link>
+            <Link to="/contact" className={ colorBorderClasses + `text-base md:text-lg xl:text-xl uppercase text-center inline-block mx-auto font-medium border-b-2 group`}>
+              <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
+                <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                  <span className="block transform translate">Get In Touch</span>
+                  <span className="hidden md:block">Get In Touch</span>
+                </span>
+              </span>
+            </Link>
           </div>
         </div>
       </div>

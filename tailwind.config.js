@@ -59,18 +59,21 @@ module.exports = {
         tiny: '-.01em',
       },
       spacing: {
+        '3px': '3px',
         '2px': '2px',
         '10px': '5px',
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
         '128': '32rem',
-        '25vh': '25vh'
+        '25vh': '25vh',
+        '100vh': '100vh'
       },
     }
   },
   variants: {
-    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
+    translate: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus']
   },
   corePlugins: {
     container: false

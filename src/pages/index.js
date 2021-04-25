@@ -162,8 +162,13 @@ const IndexPage = ({ data: { home }, location}) => {
                   </span>
                 </div>
                 <div className="w-1/2 text-right">
-                <Link className="text-base md:text-lg xl:text-xl uppercase font-medium inline-block border-b border-black" to="/about">
-                  About Us
+                <Link className="text-base md:text-lg xl:text-xl uppercase font-medium inline-block border-b border-black group" to="/about">
+                  <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
+                    <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                      <span className="block transform translate">About Us</span>
+                      <span className="hidden md:block">About Us</span>
+                    </span>
+                  </span>
                 </Link>
                 </div>
               </div>

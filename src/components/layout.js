@@ -41,7 +41,7 @@ class Layout extends React.Component {
     return (
       <>
         
-        {/* { this.state.showIntro && ( */}
+        { this.state.showIntro && (
           <motion.section
             initial="initial"
             animate="enter"
@@ -261,7 +261,7 @@ class Layout extends React.Component {
               </motion.div>
             </motion.div>
           </motion.section>
-        {/* )} */}
+        )}
 
         <div className="w-full h-screen absolute top-0 left-0 right-0 bottom-0 texture-overlay z-0"></div>
         <Header noLogo={ this.props.location.pathname === '/' ? true : false }/>

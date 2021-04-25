@@ -41,13 +41,27 @@ const ContactPage = ({ data: { contact }, location}) => {
                   <span className="inline-block transform rotate-90">↳</span> Get in touch</span>
                 </span>
                 { contact.address && (
-                  <span className="mb-2 block" dangerouslySetInnerHTML={{ __html: contact.address }} />
+                  <span className="mb-4 block" dangerouslySetInnerHTML={{ __html: contact.address }} />
                 )}
                 { contact.emailAddress && (
-                  <a href={`mailto:${contact.emailAddress}`} className="block hover:underline focus:underline">{contact.emailAddress}</a>
+                  <a href={`mailto:${contact.emailAddress}`} className="block group">
+                    <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
+                      <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                        <span className="block transform translate">{contact.emailAddress}</span>
+                        <span className="hidden md:block">{contact.emailAddress}</span>
+                      </span>
+                    </span>
+                  </a>
                 )}
                 { contact.phoneNumber && (
-                  <a href={`tel:${contact.phoneNumber}`} className="block hover:underline focus:underline">{contact.phoneNumber}</a>
+                  <a href={`tel:${contact.phoneNumber}`} className="block group">
+                    <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
+                      <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                        <span className="block transform translate">{contact.phoneNumber}</span>
+                        <span className="hidden md:block">{contact.phoneNumber}</span>
+                      </span>
+                    </span>
+                  </a>
                 )}
               </span>
             </motion.div>
@@ -117,7 +131,14 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateY: 0 }}
                           transition={{ duration: 1, delay: 0.65, ease: [0.76, 0, 0.24, 1] }}
                           className="block">
-                            <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block border-b border-black">Send Details</button>
+                            <button type="submit" className="focus:outline-none hover:outline-none text-base md:text-lg xl:text-xl uppercase font-medium block group border-b border-black">
+                              <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
+                                <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                                  <span className="block transform translate">Send Details</span>
+                                  <span className="hidden md:block">Send Details</span>
+                                </span>
+                              </span>
+                            </button>
                         </motion.span>
                       </span>
                     </form>
