@@ -13,10 +13,12 @@ const FooterCta = ({ color }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "footer.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
-            ...GatsbyImageSharpFluid
+      contact: datoCmsContact {
+        footerImage {
+          fluid(
+            maxWidth: 1900,
+            imgixParams: { w: "1900", h: "1200", sharp: 5 }) {
+            ...GatsbyDatoCmsFluid_noBase64
           }
         }
       }
@@ -30,7 +32,7 @@ const FooterCta = ({ color }) => {
       <div className="bg-gradient-to-t w-full h-64 block from-black via-black to-transparent absolute bottom-0 left-0 right-0 z-10 opacity-75"></div>
 
       <div className="absolute inset-0 opacity-20 z-0" data-scroll data-scroll-speed="-0.75">
-        <Img fluid={data.file.childImageSharp.fluid} alt="Footer Image" className="opacity-50 object-cover object-center w-full h-full will-change" />
+        <Img fluid={data.contact.footerImage.fluid} alt="Footer Image" className="opacity-50 object-cover object-center w-full h-full will-change" />
       </div>
 
       <div className="container relative z-20">
