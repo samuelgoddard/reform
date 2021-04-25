@@ -148,7 +148,7 @@ class AboutPage extends React.Component {
               </div> */}
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 bg-black texture-overlay texture-overlay--dark text-white relative">
+            <motion.div variants={fade} className="md:col-span-1 border-l border-black bg-black texture-overlay texture-overlay--dark text-white relative">
               <div className="content relative" id="content-pane">
                 
                 {/* <div className="h-full about-content"> */}
