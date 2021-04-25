@@ -4,106 +4,118 @@ import Footer from "../components/footer/footer"
 import { graphql, Link } from "gatsby"
 import { motion } from 'framer-motion'
 import NumberShape from "../components/numberShape"
-// import Scroll from "../components/locomotiveScroll"
+import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
-import LocomotiveScroll from "locomotive-scroll"
+// import LocomotiveScroll from "locomotive-scroll"
 // import Motif from "../components/motif"
 import Img from "gatsby-image"
 import { gsap, Power2 } from 'gsap';
 import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { scroll } from "../theme"
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { scroll } from "../theme"
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(SplitText);
 
 class AboutPage extends React.Component {
   componentDidMount() {
-    let locomotiveScroll
-    locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector(scroll.container),
-      ...scroll.options,
-    })
-    locomotiveScroll.update();
+    // let locomotiveScroll
+    // locomotiveScroll = new LocomotiveScroll({
+    //   el: document.querySelector(scroll.container),
+    //   ...scroll.options,
+    // })
+    // locomotiveScroll.update();
 
-    window.scroll = locomotiveScroll
+    // window.scroll = locomotiveScroll
     
-    locomotiveScroll.on("scroll", ScrollTrigger.update);
+    // locomotiveScroll.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy("#scroll-container", {
-      scrollTop(value) {
-        return arguments.length ? locomotiveScroll.scrollTo(value, 0, 0) : locomotiveScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-      },
-      // Mobile stuff to potentially remove....
-      pinType: document.querySelector("#scroll-container").style.transform ? "transform" : "fixed"
+    // ScrollTrigger.scrollerProxy("#scroll-container", {
+    //   scrollTop(value) {
+    //     return arguments.length ? locomotiveScroll.scrollTo(value, 0, 0) : locomotiveScroll.scroll.instance.scroll.y;
+    //   },
+    //   getBoundingClientRect() {
+    //     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+    //   },
+    //   // Mobile stuff to potentially remove....
+    //   pinType: document.querySelector("#scroll-container").style.transform ? "transform" : "fixed"
+    // });
+
+    // let revealContainers = document.querySelectorAll(".scrollreveal");
+
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChildNonScroll" });
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineParentNonScroll" })
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineChildNonScroll" });
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineParentNonScroll" });
+    
+
+    let noneScrollItems = document.querySelectorAll(".lineChildNonScroll");
+
+    gsap.from(noneScrollItems, {
+      yPercent: 100,
+      autoAlpha: 0,
+      delay: 0.5,
+      duration: 0.5,
+      stagger: 0.045,
+      ease: Power2.out,
     });
 
-    let revealContainers = document.querySelectorAll(".scrollreveal");
-
-    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChild" });
-    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineParent" })
-    new SplitText(".textreveal", { type: "lines", linesClass: "lineChild" });
-    new SplitText(".textreveal", { type: "lines", linesClass: "lineParent" });
-
-    revealContainers.forEach((container) => {
-      let inner = container.querySelectorAll(".lineChild");
-      let grayImages = container.querySelectorAll(".grayimage");
+    // revealContainers.forEach((container) => {
+    //   let inner = container.querySelectorAll(".lineChild");
+    //   let grayImages = container.querySelectorAll(".grayimage");
       
-      const anim = gsap.from(inner, {
-        yPercent: 100,
-        autoAlpha: 0,
-        delay: -1.5,
-        duration: 0.5,
-        stagger: 0.045,
-        ease: Power2.out,
-        paused: true
-      });
+    //   const anim = gsap.from(inner, {
+    //     yPercent: 100,
+    //     autoAlpha: 0,
+    //     delay: -1.5,
+    //     duration: 0.5,
+    //     stagger: 0.045,
+    //     ease: Power2.out,
+    //     paused: true
+    //   });
 
-      ScrollTrigger.create({
-        trigger: container,
-        start: '200 bottom',
-        scroller: "#scroll-container",
-        onEnter: () => anim.restart()
-      }); 
+    //   ScrollTrigger.create({
+    //     trigger: container,
+    //     start: '200 bottom',
+    //     scroller: "#scroll-container",
+    //     onEnter: () => anim.restart()
+    //   }); 
       
-      ScrollTrigger.create({
-        trigger: container,
-        start: '-50px bottom',
-        scroller: "#scroll-container",
-        onLeaveBack: () => anim.pause(0)
-      });
+    //   ScrollTrigger.create({
+    //     trigger: container,
+    //     start: '-50px bottom',
+    //     scroller: "#scroll-container",
+    //     onLeaveBack: () => anim.pause(0)
+    //   });
 
-      const animGrayImages = gsap.from(grayImages, {
-        autoAlpha: 0,
-        delay: 0,
-        duration: 0.75,
-        ease: Power2.out,
-        paused: true
-      });
+    //   const animGrayImages = gsap.from(grayImages, {
+    //     autoAlpha: 0,
+    //     delay: 0,
+    //     duration: 0.75,
+    //     ease: Power2.out,
+    //     paused: true
+    //   });
 
-      ScrollTrigger.create({
-        trigger: container,
-        start: '200 bottom',
-        scroller: "#scroll-container",
-        onEnter: () => animGrayImages.restart()
-      }); 
+    //   ScrollTrigger.create({
+    //     trigger: container,
+    //     start: '200 bottom',
+    //     scroller: "#scroll-container",
+    //     onEnter: () => animGrayImages.restart()
+    //   }); 
       
-      ScrollTrigger.create({
-        trigger: container,
-        start: '-50px bottom',
-        scroller: "#scroll-container",
-        onLeaveBack: () => animGrayImages.pause(0)
-      });
-    });
+    //   ScrollTrigger.create({
+    //     trigger: container,
+    //     start: '-50px bottom',
+    //     scroller: "#scroll-container",
+    //     onLeaveBack: () => animGrayImages.pause(0)
+    //   });
+    // });
 
   }
 
-  componentWillUnmount() {
-    window.scroll.update();
-    window.scroll.destroy();
-  }
+  // componentWillUnmount() {
+  //   window.scroll.update();
+  //   window.scroll.destroy();
+  // }
 
   render() {
     return (
@@ -115,7 +127,7 @@ class AboutPage extends React.Component {
           imageOverride={this.props.data.about.metaTags && this.props.data.about.metaTags.image ? this.props.data.about.metaTags.image.url : null }
         />
 
-      {/* <Scroll callback={this.props.data.location} /> */}
+      <Scroll callback={this.props.data.location} />
         
         <motion.section
           initial="initial"
@@ -128,88 +140,8 @@ class AboutPage extends React.Component {
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
             <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0">
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  At Reform we thrive
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  on <span className="italic">identifying</span> 
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  development
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  opportunities both
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  for ourselves &amp; with
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  land owners not
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  realising the true
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  potential of their
-                  </motion.span>
-                </span>
-                <span className="overflow-hidden block">
-                  <motion.span
-                    initial={{ translateY: "100%" }}
-                    animate={{ translateY: 0 }}
-                    transition={{ duration: 1, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
-                    className="block">
-                  assets.
-                  </motion.span>
-                </span>
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0 textreveal">
+                At Reform we thrive on <span className="italic">identifying</span> development opportunities both for ourselves &amp; with land owners not realising the true potential of their assets.
               </h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
@@ -369,8 +301,8 @@ export const query = graphql`
           location
           image {
             fluid(
-              maxWidth: 1200,
-              imgixParams: { w: "1200", h: "740", fit: "fillmax", crop: "center" }) {
+              maxWidth: 1400,
+              imgixParams: { w: "1300", h: "850", fit: "fillmax", crop: "center" }) {
               ...GatsbyDatoCmsFluid
             }
           }

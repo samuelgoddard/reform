@@ -7,8 +7,32 @@ import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
 import NumberShape from "../components/numberShape"
 // import Img from "gatsby-image"
+import { gsap, Power2 } from 'gsap';
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
+const { useEffect } = React;
 
 const ContactPage = ({ data: { contact }, location}) => {
+
+  useEffect(() => {
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineParent" })
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineChild" });
+    new SplitText(".textreveal", { type: "lines", linesClass: "lineParent" });
+
+    let inner = document.querySelectorAll(".lineChild");
+
+    gsap.from(inner, {
+      yPercent: 100,
+      autoAlpha: 0,
+      delay: 0.5,
+      duration: 0.5,
+      stagger: 0.045,
+      ease: Power2.out,
+    });
+  }, []);
+
   return (
     <>
       <SEO
@@ -36,15 +60,15 @@ const ContactPage = ({ data: { contact }, location}) => {
                 <NumberShape number="C" />
               </span>
               <span className="bottom-0 left-0 md:absolute block max-w-xs p-6 pb-12 xl:text-lg">
-                <span className="block mb-3 md:mb-10">
+                <span className="block mb-3 md:mb-10 textreveal">
                   <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                   <span className="inline-block transform rotate-90">↳</span> Get in touch</span>
                 </span>
                 { contact.address && (
-                  <span className="mb-4 block" dangerouslySetInnerHTML={{ __html: contact.address }} />
+                  <span className="mb-4 block textreveal" dangerouslySetInnerHTML={{ __html: contact.address }} />
                 )}
                 { contact.emailAddress && (
-                  <a href={`mailto:${contact.emailAddress}`} className="block group">
+                  <a href={`mailto:${contact.emailAddress}`} className="block group textreveal">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{contact.emailAddress}</span>
@@ -54,7 +78,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                   </a>
                 )}
                 { contact.phoneNumber && (
-                  <a href={`tel:${contact.phoneNumber}`} className="block group">
+                  <a href={`tel:${contact.phoneNumber}`} className="block group textreveal">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{contact.phoneNumber}</span>
@@ -70,25 +94,8 @@ const ContactPage = ({ data: { contact }, location}) => {
               <div className="max-w-6xl content relative h-full">
                 <div className="py-6 px-6 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
-                    <h1 className="contact-title mb-8 md:mb-12 3xl:mb-16">
-                      <span className="overflow-hidden block">
-                      <motion.span
-                        initial={{ translateY: "100%" }}
-                        animate={{ translateY: 0 }}
-                        transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                        className="block">
-                        Looking for a partner for
-                      </motion.span>
-                      </span>
-                      <span className="overflow-hidden block">
-                        <motion.span
-                          initial={{ translateY: "100%" }}
-                          animate={{ translateY: 0 }}
-                          transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
-                          className="block">
-                          your next development?
-                        </motion.span>
-                      </span>
+                    <h1 className="contact-title mb-8 md:mb-12 3xl:mb-16 textreveal">
+                      Looking for a partner for your <span className="block md:inline-block">next development?</span>
                     </h1>
                     
                     <form className="block w-full max-w-xl">

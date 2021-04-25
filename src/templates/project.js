@@ -124,7 +124,7 @@ export const query = graphql`
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { w: "1600", h: "900", fit: "fillmax", crop: "center" }) {
+          imgixParams: { w: "1600", h: "800", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid
         }
       }
