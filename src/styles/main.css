@@ -116,7 +116,6 @@
 }
 
 .logo-mask-reveal {
-
   width: 18%;
   left: 45%;
 }
@@ -126,12 +125,19 @@
   display: block;
 }
 
+.split-right {
+  .lineParent, .lineParentNonScroll, .lineChildNonScroll, .lineChild {
+      @apply text-right;
+      text-align: end !important;
+  }
+}
+
 
 /*! purgecss start ignore */
 .about-image-teaser {
   .grayimage {
-    @apply transition-all ease-in-out duration-700 opacity-50;
-    
+    @apply transition-all ease-in-out duration-1000 opacity-50;
+
     filter:grayscale(100%);
     -webkit-filter:grayscale(100%);
   }

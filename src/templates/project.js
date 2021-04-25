@@ -60,7 +60,7 @@ const ProjectPage = ({ data: { project }, location}) => {
               <div className="flex flex-col w-full h-full">
                 {/* <Img fluid={project.image[0].fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" /> */}
 
-                <Carousel images={project.image} location={project.location} title={project.title} />
+                <Carousel images={project.image} mobileImage={project.mobileImage} location={project.timespan} title={project.location} />
 
               </div>
             </motion.div>
@@ -82,11 +82,13 @@ const ProjectPage = ({ data: { project }, location}) => {
                     </Link>
                   </div>
                   
-                  <div className="w-full self-end pl-4 md:pl-6 pr-6 md:pr-10 pt-10">
-                    <NumberShape number="1" />
-                    <h1 className="h3 mb-4 md:mb-6 max-w-sm block textreveal">{ project.title }</h1>
+                  <div className="w-full self-end px-4 md:px-6 md:pr-10 pt-10">
+                    {/* <div className="md:hidden">
+                      <NumberShape number="1" />
+                    </div> */}
+                    <h1 className="project-title mb-6 md:mb-6 max-w-sm block textreveal">{ project.title }</h1>
 
-                    <div className="max-w-sm hidden md:block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
+                    <div className="max-w-sm block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
                   </div>
                 </div>
               </div>
@@ -94,7 +96,7 @@ const ProjectPage = ({ data: { project }, location}) => {
             
           </div>
 
-          <div className="w-10/12 block md:hidden px-4 pb-8" dangerouslySetInnerHTML={{ __html: project.content }}></div>
+          {/* <div className="w-10/12 block md:hidden px-4 pb-8" dangerouslySetInnerHTML={{ __html: project.content }}></div> */}
 
         </motion.section>
 
@@ -121,10 +123,18 @@ export const query = graphql`
   query ProjectPage($slug: String!) {
     project: datoCmsProject(slug: { eq: $slug}) {
       title
+      timespan
       image {
         fluid(
           maxWidth: 1600,
           imgixParams: { w: "1600", h: "800", fit: "fillmax", crop: "center" }) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+      mobileImage: image {
+        fluid(
+          maxWidth: 1600,
+          imgixParams: { w: "1600", h: "1600", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid
         }
       }

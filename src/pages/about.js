@@ -139,16 +139,16 @@ class AboutPage extends React.Component {
             {/* The Pinned area - BUGFIX */}
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 pt-5 pb-16 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
               <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0 textreveal">
-                At Reform we thrive on <span className="italic">identifying</span> development opportunities both for ourselves &amp; with land owners not realising the true potential of their assets.
+                At Reform we thrive on identifying development opportunities both for ourselves &amp; with land owners not realising the true potential of their assets.
               </h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
               </div> */}
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 border-l border-black bg-black texture-overlay texture-overlay--dark text-white relative">
+            <motion.div variants={fade} className="md:col-span-1 border-t md:border-l md:border-t-0 border-black bg-black texture-overlay texture-overlay--dark text-white relative">
               <div className="content relative" id="content-pane">
                 
                 {/* <div className="h-full about-content"> */}
@@ -180,7 +180,7 @@ class AboutPage extends React.Component {
                               <Link className="block relative group about-image-teaser" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="overflow-hidden grayimage">
-                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
+                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-1000 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
                                   </div>
                                 </div>
                                 <div className="pb-5 mb-5 relative">

@@ -25,7 +25,7 @@ export default class Carousel extends Component {
     };
     return (
       <div className="flex flex-col w-full h-full">
-        <div className="mb-6 md:mt-16 order-2 md:order-1 w-full h-full flex flex-col">
+        <div className="md:mb-6 md:mt-16  w-full h-full flex flex-col">
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.images.map(({ fluid }, i) => {
               return (
@@ -37,9 +37,9 @@ export default class Carousel extends Component {
           </Slider>
         </div>
 
-        <div className="border-t border-b border-black w-full flex flex-wrap items-center order-1 md:order-2 md:mb-6">
+        <div className="border-t border-b border-black w-full flex flex-wrap items-center md:mb-6">
           <div className="flex flex-wrap items-center w-full px-4 md:px-0">
-            <div className="w-auto pt-2">
+            <div className="flex-1 pt-2">
               <span className="block uppercase text-xs leading-none textreveal">{ this.props.location }</span>
               <span className="block md:text-lg xl:text-xl textreveal">{this.props.title}</span>
             </div>

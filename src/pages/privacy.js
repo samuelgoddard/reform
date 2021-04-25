@@ -139,8 +139,8 @@ class PrivacyPage extends React.Component {
             {/* The Pinned area - BUGFIX */}
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-6 py-8 md:py-24 md:px-12 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-12 xl:-mt-16 relative about-title md:w-12/12 xl:w-12/12 xl:pr-0 textreveal">
+            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 py-6 md:py-24 md:px-12 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+              <h1 className="mb-0 pb-0 md:-mt-12 xl:-mt-16 relative about-title md:w-12/12 xl:w-12/12 xl:pr-0 textreveal project-title">
                 Privacy Policy
               </h1>
 
@@ -191,7 +191,7 @@ class PrivacyPage extends React.Component {
 
                     {/* <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change" /> */}
 
-                    <div className="p-8 md:p-12 xl:p-16 md:pt-32 xl:pt-40 relative z-30">
+                    <div className="p-4 md:p-12 xl:p-16 md:pt-32 xl:pt-40 relative z-30">
                       <div className="lg:flex lg:flex-wrap items-start content">
                         <div className="textrevealContent w-11/12 md:w-9/12 lg:w-8/12 xl:w-8/12" dangerouslySetInnerHTML={{ __html:this.props.data.about.content }}>
                         </div>

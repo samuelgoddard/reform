@@ -54,12 +54,12 @@ const ContactPage = ({ data: { contact }, location}) => {
           <div className="flex flex-wrap pt-16 md:pt-16 xl:pt-20 relative h-full">
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="w-full md:w-4/12 2xl:w-3/12 relative overflow-hidden">
+            <motion.div variants={fade} className="w-full md:w-4/12 2xl:w-3/12 relative overflow-hidden order-2 md:order-1">
 
-              <span className="top-0 left-0 md:absolute block p-6">
+              <span className="top-0 left-0 md:absolute block p-4">
                 <NumberShape number="C" />
               </span>
-              <span className="bottom-0 left-0 md:absolute block max-w-xs p-6 pb-12 xl:text-lg">
+              <span className="bottom-0 left-0 md:absolute block max-w-xs p-4 pb-12 xl:text-lg">
                 <span className="block mb-3 md:mb-10 textreveal">
                   <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                   <span className="inline-block transform rotate-90">↳</span> Get in touch</span>
@@ -90,12 +90,12 @@ const ContactPage = ({ data: { contact }, location}) => {
               </span>
             </motion.div>
 
-            <motion.div variants={fade} className="w-full md:w-8/12 2xl:w-9/12 relative z-30 md:border-l border-black pb-24 md:pb-0">
+            <motion.div variants={fade} className="w-full md:w-8/12 2xl:w-9/12 relative z-30 md:border-l border-black pb-16 md:pb-0 order-1 md:order-2">
               <div className="max-w-6xl content relative h-full">
-                <div className="py-6 px-6 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
+                <div className="py-4 px-4 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
                     <h1 className="contact-title mb-8 md:mb-12 3xl:mb-16 textreveal">
-                      Looking for a partner for your <span className="block md:inline-block">next development?</span>
+                      Let's talk about your <span className="block">next project</span>
                     </h1>
                     
                     <form className="block w-full max-w-xl">
