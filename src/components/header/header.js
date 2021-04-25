@@ -10,8 +10,8 @@ const Header = ({ noLogo }) => (
       <Link className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offblack relative overflow-hidden group" activeClassName="nav--active" partiallyActive to="/about">
         <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
           <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
-            <span className="block transform translate">About <span className="hidden xs:inline-block">Us</span></span>
-            <span className="hidden md:block">About <span className="hidden xs:inline-block">Us</span></span>
+            <div className="block transform translate">About <div className="hidden xs:inline-block">Us</div></div>
+            <div className="hidden md:block">About <div className="hidden xs:inline-block">Us</div></div>
           </span>
           
         </span>
