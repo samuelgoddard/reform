@@ -1,19 +1,20 @@
 import React from "react"
 import SEO from "../components/seo"
 import Footer from "../components/footer/footer"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { motion } from 'framer-motion'
-import Scroll from "../components/locomotiveScroll"
 import NumberShape from "../components/numberShape"
+// import Scroll from "../components/locomotiveScroll"
 import { fade } from "../helpers/transitionHelper"
-import Img from "gatsby-image"
 import LocomotiveScroll from "locomotive-scroll"
+// import Motif from "../components/motif"
+import Img from "gatsby-image"
 import { gsap, Power2 } from 'gsap';
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scroll } from "../theme"
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 class IndexPage extends React.Component {
   componentDidMount() {
@@ -111,7 +112,7 @@ class IndexPage extends React.Component {
           imageOverride={this.props.data.home.metaTags && this.props.data.home.metaTags.image ? this.props.data.home.metaTags.image.url : null }
         />
 
-        <Scroll callback={this.props.location} />
+        {/* <Scroll callback={this.props.location} /> */}
         
         <motion.section
           className="bg-offwhitelight"
