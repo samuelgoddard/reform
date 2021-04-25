@@ -180,7 +180,7 @@ class AboutPage extends React.Component {
                               <Link className="block relative group about-image-teaser" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="overflow-hidden grayimage">
-                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110 scale-105" />
+                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-700 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
                                   </div>
                                 </div>
                                 <div className="pb-5 mb-5 relative">
