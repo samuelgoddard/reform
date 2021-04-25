@@ -126,9 +126,22 @@
   display: block;
 }
 
-.grayimage {
-  filter:grayscale(0%);
-  -webkit-filter:grayscale(0%);
+.about-image-teaser {
+  .grayimage {
+    @apply transition-all ease-in-out duration-700;
+    
+    opacity: 50%;
+    filter:grayscale(100%);
+    -webkit-filter:grayscale(100%);
+  }
+
+  &:hover, &:focus {
+    .grayimage {
+      @apply opacity-100;
+      filter:grayscale(0%);
+      -webkit-filter:grayscale(0%);
+    }
+  }
 }
 
 /* Slider */
