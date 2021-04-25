@@ -70,7 +70,7 @@ const ContactPage = ({ data: { contact }, location}) => {
               <div className="max-w-6xl content relative h-full">
                 <div className="py-6 px-6 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
-                    <h1 className="contact-title mb-8 md:mb-12 2xl:mb-16">
+                    <h1 className="contact-title mb-8 md:mb-12 3xl:mb-16">
                       <span className="overflow-hidden block">
                       <motion.span
                         initial={{ translateY: "100%" }}
@@ -98,7 +98,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 2xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
+                          <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -106,7 +106,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 2xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
+                          <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -114,7 +114,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 2xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
+                          <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
                       </span>
                       <span className="overflow-hidden block relative mb-6 md:mb-12">
                         <motion.span
@@ -122,7 +122,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 2xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
+                          <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
                       </span>
                       
                       <span className="overflow-hidden block relative">
