@@ -20,17 +20,17 @@ const ContactPage = ({ data: { contact }, location}) => {
 
       <Scroll callback={location} />
 
-      <div className="md:h-screen  flex flex-wrap flex-col">
+      <div className="md:h-screen flex flex-wrap flex-col">
         <motion.section
           initial="initial"
           className="flex-1 bg-offwhitelight"
           animate="enter"
           exit="exit"
         >
-          <div className="grid md:grid-cols-12 pt-16 md:pt-16 xl:pt-20 relative h-full">
+          <div className="flex flex-wrap pt-16 md:pt-16 xl:pt-20 relative h-full">
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-4 xl:col-span-4 2xl:col-span-3 relative overflow-hidden">
+            <motion.div variants={fade} className="w-full md:w-4/12 2xl:w-3/12 relative overflow-hidden">
 
               <span className="top-0 left-0 md:absolute block p-6">
                 <NumberShape number="C" />
@@ -66,11 +66,11 @@ const ContactPage = ({ data: { contact }, location}) => {
               </span>
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-8 xl:col-span-8 2xl:col-span-9 relative z-30 md:border-l border-black pb-24 md:pb-0">
-              <div className="max-w-6xl content relative h-full">                
-                <div className="p-6 md:p-16 xl:p-20 relative z-10 flex flex-wrap items-center h-full">
+            <motion.div variants={fade} className="w-full md:w-8/12 2xl:w-9/12 relative z-30 md:border-l border-black pb-24 md:pb-0">
+              <div className="max-w-6xl content relative h-full">
+                <div className="py-6 px-6 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
-                    <h1 className="h2 mb-8 md:mb-12 xl:mb-16">
+                    <h1 className="contact-title mb-8 md:mb-12 xl:mb-16">
                       <span className="overflow-hidden block">
                       <motion.span
                         initial={{ translateY: "100%" }}
