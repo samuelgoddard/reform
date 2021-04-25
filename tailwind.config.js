@@ -61,6 +61,7 @@ module.exports = {
       },
       spacing: {
         '3px': '3px',
+        '4px': '4px',
         '2px': '2px',
         '10px': '3px',
         '72': '18rem',
@@ -70,6 +71,10 @@ module.exports = {
         '25vh': '25vh',
         '100vh': '100vh'
       },
+      zIndex: {
+        '60': 60,
+        '70': 70,
+      }
     }
   },
   variants: {

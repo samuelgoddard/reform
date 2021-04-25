@@ -139,7 +139,7 @@ class AboutPage extends React.Component {
             {/* The Pinned area - BUGFIX */}
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 pt-5 pb-16 md:py-24 md:mt-2 xl:mt-5 overflow-hidden" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 pt-5 pb-32 md:py-24 md:mt-2 xl:mt-5 overflow-hidden md:mb-0" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
               <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0 textreveal">
                 At Reform we thrive on identifying development opportunities both for ourselves &amp; with land owners not realising the true potential of their assets.
               </h1>
@@ -165,34 +165,34 @@ class AboutPage extends React.Component {
 
                     <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change" />
 
-                    <div className="p-8 md:p-12 xl:p-16 relative z-30">
-                      <div className="lg:flex lg:flex-wrap items-start">
+                    <div className="md:p-12 xl:p-16 relative z-30">
+                      <div className="lg:flex lg:flex-wrap items-start px-4 md:px-0 pt-12 md:pt-0">
                         <NumberShape number="A" white />
-                        <div className="scrollreveal w-11/12 md:w-9/12 lg:w-7/12 xl:w-6/12">
-                          <div className="xl:text-lg pt-3 lg:pt-0 lg:pl-5 textrevealContent" dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
+                        <div className="scrollreveal w-11/12 md:w-9/12 lg:w-8/12 xl:w-8/12 2xl:w-7/12 xl:max-w-md">
+                          <div className="xl:text-lg pt-3 lg:pt-0 lg:pl-5 " dangerouslySetInnerHTML={{ __html: this.props.data.about.contentText }} />
                         </div>
                       </div>
 
-                      <div className="my-12 md:my-20 xl:my-32">
+                      <div className="mt-16 mb-20 md:mt-20 md:mb-32 xl:mt-32 xl:mb-40">
                         {this.props.data.projects.edges.map(({ node }, i) => {
                           return (
-                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16 mx-auto" key={i}>
+                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-6 md:mb-12 xl:mb-16 mx-auto" key={i}>
                               <Link className="block relative group about-image-teaser" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="overflow-hidden grayimage">
                                     <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-1000 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
                                   </div>
                                 </div>
-                                <div className="pb-5 mb-5 relative">
+                                <div className="pb-5 mb-5 relative px-4 md:px-0">
                                   <span className="overflow-hidden block scrollreveal mb-1">
-                                    <span className="textreveal block">
+                                    <span className=" block">
                                       <h4 className="mb-0 block text-center">{ node.title }</h4>
                                     </span>
                                   </span>
 
                                   <span className="overflow-hidden block scrollreveal">
-                                    <span className="textreveal block">
-                                      <span className="text-base block italic text-center">{ node.location }</span>
+                                    <span className=" block">
+                                      <span className="text-sm block italic text-center">{ node.location }</span>
                                     </span>
                                   </span>
                                 </div>
@@ -202,41 +202,38 @@ class AboutPage extends React.Component {
                         })}
                       </div>
                     
-                      <div className="my-12 md:my-16 xl:my-24">                        
-                        <div className="my-12 md:my-16 xl:my-24">
-                          <h3 className="mb-12 md:mb-16 xl:mb-24">
-                            <span className="overflow-hidden block scrollreveal">
-                              <span className="textreveal block">
-                                An experienced<br/>team
-                              </span>
-                            </span>
-                          </h3>
-                        </div>
+                      <div className="my-12 md:my-16 xl:my-24 px-4 md:px-0">                        
 
+                        <div className="lg:flex lg:flex-wrap items-start">
+                          <NumberShape number="B" white />
+                          <div className="scrollreveal">
+                            <h2 className="mb-12 md:mb-16 xl:mb-24 lg:pt-2 lg:ml-3">An experienced<br/>team</h2>
+                          </div>
+                        </div>
 
                         {this.props.data.team.edges.map(({ node }, i) => {
                           return (
-                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-8 md:mb-12 xl:mb-16 relative" key={i}>
+                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-16 md:mb-16 xl:mb-16 relative" key={i}>
                               {/* <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" /> */}
                               <div className="flex items-center border-b border-offwhite pb-5 mb-5">
                                 <h4 className="mb-0 pb-0">
                                   <span className="overflow-hidden block scrollreveal">
-                                    <span className="textreveal block">
+                                    <span className=" block">
                                       { node.firstName } <span className="italic">{ node.secondName }</span>
                                     </span>
                                   </span>
                                 </h4>
                                 { node.jobTitle && (
                                   <span className="ml-auto overflow-hidden block scrollreveal">
-                                    <span className="textreveal block">
-                                      <span className=" italic">{ node.jobTitle }</span>
+                                    <span className="block">
+                                      <span className="text-xs md:text-sm italic">{ node.jobTitle }</span>
                                     </span>
                                   </span>
                                 )}
                               </div>
                               
                               <div className="scrollreveal">
-                                <div className="xl:text-lg w-10/12 textrevealContent" dangerouslySetInnerHTML={{ __html: node.bio }}></div>
+                                <div className="xl:text-lg w-11/12 " dangerouslySetInnerHTML={{ __html: node.bio }}></div>
                               </div>
 
                             </motion.div>
@@ -293,7 +290,7 @@ export const query = graphql`
       }
       slug
     }
-    projects: allDatoCmsProject {
+    projects: allDatoCmsProject(sort: { fields: [position], order: ASC }) {
       edges {
         node {
           title

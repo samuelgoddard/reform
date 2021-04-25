@@ -193,7 +193,7 @@ class PrivacyPage extends React.Component {
 
                     <div className="p-4 md:p-12 xl:p-16 md:pt-32 xl:pt-40 relative z-30">
                       <div className="lg:flex lg:flex-wrap items-start content">
-                        <div className="textrevealContent w-11/12 md:w-9/12 lg:w-8/12 xl:w-8/12" dangerouslySetInnerHTML={{ __html:this.props.data.about.content }}>
+                        <div className="w-11/12 md:w-9/12 lg:w-8/12 xl:w-8/12" dangerouslySetInnerHTML={{ __html:this.props.data.about.content }}>
                         </div>
                       </div>
 

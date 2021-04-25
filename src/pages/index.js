@@ -199,12 +199,12 @@ class IndexPage extends React.Component {
                 </div>
 
                 <div  className="flex flex-wrap pb-8 md:pb-16 xl:pb-20 px-4 md:px-12 lg:px-16 xl:px-20 scrollreveal">
-                  <div className="w-1/2 textreveal">
+                  <div className="w-1/2 ">
                     <span className="text-base md:text-lg xl:text-xl uppercase font-medium block">
                     <span className="inline-block transform rotate-90 -ml-1">↳</span> What We Do
                     </span>
                   </div>
-                  <div className="w-1/2 text-right textreveal split-right">
+                  <div className="w-1/2 text-right  split-right">
                   <Link className="text-base md:text-lg xl:text-xl uppercase font-medium inline-block border-b border-black group" to="/about">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
@@ -229,8 +229,8 @@ class IndexPage extends React.Component {
                               <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                               <NumberShape number={i + 1} />
 
-                              <span className="inline-block ml-1 md:ml-2 textreveal">{ heading }</span></h4>
-                              <div className="w-10/12 md:w-10/12 xl:w-10/12 textrevealContent" dangerouslySetInnerHTML={{ __html: text }} />
+                              <span className="inline-block ml-1 md:ml-2 ">{ heading }</span></h4>
+                              <div className="w-11/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
                         )
@@ -244,8 +244,8 @@ class IndexPage extends React.Component {
                               <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">                      
                               <NumberShape number={i + 3} />
 
-                              <span className="inline-block ml-1 md:ml-2 textreveal">{ heading }</span></h4>
-                              <div className="w-10/12 md:w-10/12 xl:w-10/12 textrevealContent" dangerouslySetInnerHTML={{ __html: text }} />
+                              <span className="inline-block ml-1 md:ml-2 ">{ heading }</span></h4>
+                              <div className="w-11/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
                         )

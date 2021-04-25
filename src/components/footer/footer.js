@@ -19,7 +19,7 @@ const Footer = ({ color, hideCta }) => {
 
       <footer className={ colorClasses + colorBorderClasses + `border-t w-full `}>
         <div className="flex flex-wrap items-center">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-r group`}>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={ colorBorderClasses + `text-xs md:text-lg xl:text-xl uppercase font-medium block px-3 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-r group`}>
             <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
               <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                 <span className="block transform translate">Insta<span className="hidden md:inline">gram</span></span>
@@ -28,11 +28,11 @@ const Footer = ({ color, hideCta }) => {
             </span>
           </a>
 
-          <span className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-r flex items-center`}>
-            <span className="mr-2">Site by</span>
+          <span className={ colorBorderClasses + `text-xs md:text-lg xl:text-xl uppercase font-medium px-3 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-r flex items-center`}>
+            <span className="mr-1"><span className="hidden md:inline-block">Site</span> by</span>
             <a target="_blank" rel="noopener noreferrer" className="group leading-none flex" href="https://ijpowell.co.uk">
             <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
-              <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+              <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px xl:pt-px md:leading-tight">
                 <span className="block transform translate">IJP</span>
                 <span className="hidden md:block">IJP</span>
               </span>
@@ -41,17 +41,17 @@ const Footer = ({ color, hideCta }) => {
             <span className="mx-1">+</span>
             <a target="_blank" rel="noopener noreferrer" className="group leading-none flex" href="https://samgoddard.co.uk">
             <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
-              <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+              <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px xl:pt-px md:leading-tight">
                 <span className="block transform translate">SG</span>
                 <span className="hidden md:block">SG</span>
               </span>
             </span>
             </a>
           </span>
-          {/* <span className="text-sm md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mx-auto text-center hidden xl:block">
+          {/* <span className="text-xs md:text-lg xl:text-xl uppercase font-medium px-3 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mx-auto text-center hidden xl:block">
             Development done differently
           </span> */}
-          <Link className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l group`} to="/privacy">
+          <Link className={ colorBorderClasses + `text-xs md:text-lg xl:text-xl uppercase font-medium block px-3 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l group`} to="/privacy">
             <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
               <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                 <span className="block transform translate">Privacy <span className="hidden md:inline">Policy</span></span>
@@ -59,7 +59,7 @@ const Footer = ({ color, hideCta }) => {
               </span>
             </span>
           </Link>
-          <span className={ colorBorderClasses + `text-sm md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-l`}>
+          <span className={ colorBorderClasses + `text-xs md:text-lg xl:text-xl uppercase font-medium block px-3 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 border-l`}>
             &copy;2021
           </span>
         </div>

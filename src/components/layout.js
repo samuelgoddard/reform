@@ -50,7 +50,7 @@ class Layout extends React.Component {
             <motion.div
               animate={{ translateY: "-100%" }}
               transition={{ duration: 0.1, delay: 5.5, ease: [0.76, 0, 0.24, 1] }}
-              className="fixed w-full h-screen z-50"
+              className="fixed w-full h-screen z-70"
             >
               <motion.div
                 animate={{ opacity: 0 }}
@@ -82,7 +82,7 @@ class Layout extends React.Component {
                         className="w-full h-px bg-black absolute bottom-0 left-0 right-0 z-10"></motion.div>
 
                     <div className="flex flex-wrap items-center">
-                      <span className="text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" to="/about">
+                      <span className="text-xs md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 mr-auto border-r border-offwhite relative overflow-hidden" to="/about">
 
                         <motion.span 
                           initial={{ translateY: "100%" }}
@@ -103,7 +103,7 @@ class Layout extends React.Component {
                         </span>
                       </span>
                       <span className="block px-2 xs:px-5 mx-auto" to="/">
-                        <span className={`text-base md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-4 md:-ml-20 lg:-ml-32 opacity-100`}>
+                        <span className={`text-xs md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-4 md:-ml-20 lg:-ml-32 opacity-100`}>
                           <div className="overflow-hidden w-24 md:w-64 lg:w-84 mt-2 pt-px">
                             {/* <motion.span
                               initial={{ opacity: 0 }}
@@ -132,7 +132,7 @@ class Layout extends React.Component {
                         </div>
                         
                       </span>
-                      <Link className="text-base md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite relative block overflow-hidden" to="/contact">
+                      <Link className="text-xs md:text-lg xl:text-xl uppercase font-medium px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 ml-auto border-l border-offwhite relative block overflow-hidden" to="/contact">
 
                         <motion.span 
                           initial={{ translateY: "100%" }}

@@ -129,7 +129,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <textarea rows="3" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
+                          <textarea rows="2" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
                       </span>
                       
                       <span className="overflow-hidden block relative">

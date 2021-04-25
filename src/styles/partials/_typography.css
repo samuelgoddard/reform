@@ -89,6 +89,36 @@ h2, .h2 {
   }
 }
 
+.footer-title {
+  @apply text-3xl leading-tighter tracking-tight;
+
+  @screen md {
+    @apply text-5xl leading-tighter;
+  }
+  @screen 2xl {
+    @apply text-6xl leading-tighter;
+  }
+
+  p {
+    @apply tracking-tight;
+  }
+}
+
+.team-title {
+  @apply text-5xl leading-tighter tracking-tight;
+
+  @screen md {
+    @apply text-5xl leading-tighter;
+  }
+  @screen 2xl {
+    @apply text-6xl leading-tighter;
+  }
+
+  p {
+    @apply tracking-tight;
+  }
+}
+
 h3, .h3 {
   @apply text-3xl leading-none tracking-tiny;
 
