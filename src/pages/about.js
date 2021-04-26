@@ -155,15 +155,15 @@ class AboutPage extends React.Component {
                 <div className="h-full">
                   {/* z-30 here */}
 
-                  <div className="mb-12 md:mb-16 xl:mb-24">
+                  <div className="mb-12 md:mb-16 xl:mb-24 z-30">
 
-                    {/* <div className="h-screen z-50" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
-                      <div className="w-full h-56 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-red-500 z-50"></div>
-                    </div> */}
+                    <div className="h-screen relative z-40 pointer-events-none" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
+                      <div className="w-full h-56 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-gradient-to-t z-40"></div>
+                    </div>
 
                     {/* <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change md:-mt-100vh" /> */}
 
-                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change" />
+                    <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change z-50 md:-mt-100vh" />
 
                     <div className="md:p-12 xl:p-16 relative z-30">
                       <div className="lg:flex lg:flex-wrap items-start px-4 md:px-0 pt-12 md:pt-0">
