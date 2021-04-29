@@ -20,7 +20,7 @@ const Header = ({ noLogo }) => (
           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>
         </span>
       </Link>
-      <Link className="block px-2 xs:px-5 mx-auto group" to="/">
+      <Link className="block px-2 xs:px-5 mx-auto group logo-reveal" to="/">
         
           <span className={`text-xs md:text-lg xl:text-xl uppercase font-medium block px-4 md:px-6 xl:px-8 py-4 md:py-5 xl:py-6 transition ease-in-out duration-1000 absolute top-0 -ml-10 xs:-ml-8 md:-ml-20 lg:-ml-32 ${noLogo ? 'opacity-100' : ' opacity-0' }`}>
             <div className="overflow-hidden w-32 md:w-64 lg:w-84">

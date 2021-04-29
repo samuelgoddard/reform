@@ -14,8 +14,7 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText);
 const { useEffect } = React;
-
-const ProjectPage = ({ data: { project }, location}) => {
+const ProjectPage = ({ data: { project }, location, pageContext}) => {
   
   useEffect(() => {
     new SplitText(".textrevealContent > *", { type: "lines", linesClass: "lineChild" });
@@ -34,6 +33,8 @@ const ProjectPage = ({ data: { project }, location}) => {
       ease: Power2.out,
     });
   }, []);
+
+  const { prev } = pageContext;
 
   return (
     <>
@@ -60,6 +61,33 @@ const ProjectPage = ({ data: { project }, location}) => {
               <div className="flex flex-col w-full h-full">
                 {/* <Img fluid={project.image[0].fluid} className="w-full h-full object-cover object-center mb-6 md:mt-16 order-2 md:order-1" /> */}
 
+                <div className={`self-start border-t border-b border-black w-full mb-0 md:mb-0 md:-mt-6 xl:-mt-4 block md:hidden md:mx-5 ${prev ? 'pt-4 pb-3' : 'pt-4 pb-4'}`}>
+              { prev ? (
+                <Link to={`/about/${prev.node.slug}/`} className="text-sm md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-2 group">
+                  
+                  <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
+                    <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                      <span className="block transform translate">Next Project</span>
+                      <span className="hidden md:block">Next Project</span>
+                    </span>
+                  </span>
+
+                  <span className="inline-block transform leading-none mx-1 align-top mt-1">↳</span>
+                </Link>
+              ) : (
+                <Link to={`/about/`} className="text-sm md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-2 group">
+                  <span className="inline-block transform leading-none rotate-180 mx-1 align-top">↳</span>
+
+                  <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
+                    <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
+                      <span className="block transform translate">Back To All</span>
+                      <span className="hidden md:block">Back To All</span>
+                    </span>
+                  </span>
+                </Link>
+              )}
+            </div>
+
                 <Carousel images={project.image} mobileImage={project.mobileImage} location={project.timespan} title={project.location} />
 
               </div>
@@ -69,17 +97,31 @@ const ProjectPage = ({ data: { project }, location}) => {
               <div className="max-w-4xl content relative h-full md:min-h-screen md:max-h-screen">
                 <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:min-h-screen md:max-h-screen md:pt-32">
 
-                  <div className="self-start border-t border-b border-black w-full py-5 mb-8 md:mb-0 md:-mt-6 xl:-mt-4 hidden md:block md:mx-5">
-                    <Link to="/about/" className="text-base md:text-lg xl:text-xl uppercase leading-none font-medium block self-start text-right pr-2 group">
-                      <span className="inline-block transform rotate-180 leading-none align-top mr-1">↳</span> 
-                      
-                      <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
-                        <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
-                          <span className="block transform translate">Back to all</span>
-                          <span className="hidden md:block">Back to all</span>
+                  <div className={`self-start border-t border-b border-black w-full mb-8 md:mb-0 md:-mt-6 xl:-mt-4 hidden md:block md:mx-5 ${prev ? 'pt-5 pb-4' : 'pt-5 pb-5'}`}>
+                    { prev ? (
+                      <Link to={`/about/${prev.node.slug}/`} className="text-base md:text-lg uppercase leading-none font-medium block self-start text-right pr-2 group">
+                        
+                        <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
+                          <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:leading-tight">
+                            <span className="block transform translate">Next Project</span>
+                            <span className="hidden md:block">Next Project</span>
+                          </span>
                         </span>
-                      </span>
-                    </Link>
+
+                        <span className="inline-block transform leading-none mx-1 align-top md:mt-1">↳</span>
+                      </Link>
+                    ) : (
+                      <Link to={`/about/`} className="text-base md:text-lg uppercase leading-none font-medium block self-start text-right pr-2 group">
+                        <span className="inline-block transform leading-none rotate-180 mx-1 align-top">↳</span>
+
+                        <span className="inline-block overflow-hidden relative h-auto md:h-5 xl:h-5 leading-tight align-top">
+                          <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:leading-tight">
+                            <span className="block transform translate">Back To All</span>
+                            <span className="hidden md:block">Back To All</span>
+                          </span>
+                        </span>
+                      </Link>
+                    )}
                   </div>
                   
                   <div className="w-full self-end px-4 md:px-6 md:pr-10 pt-10">

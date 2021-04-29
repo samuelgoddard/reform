@@ -165,7 +165,7 @@ class IndexPage extends React.Component {
                 <div className="pb-12 md:pb-20 3xl:pb-32 bg-offwhitelight">
                   <div className="relative lg:-mt-12">
 
-                    <div className="flex-wrap absolute top-0 left-0 hero-image-tagline hidden lg:flex">
+                    <div className="flex-wrap absolute top-0 left-0 hero-image-tagline hidden lg:flex z-30">
                       <span className="block ml-5 leading-tight scrollreveal">
                         <span className="overflow-hidden block textrevealnonescroll">
                             Helping to transform the landscape of property development

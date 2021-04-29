@@ -6,7 +6,7 @@ module.exports = async ({ actions, graphql }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allDatoCmsProject {
+        allDatoCmsProject(sort: { fields: [position], order: ASC }) {
           edges {
             node {
               slug
@@ -15,15 +15,30 @@ module.exports = async ({ actions, graphql }) => {
         }
       }   
     `).then(result => {
-      result.data.allDatoCmsProject.edges.map(edge => {
+      // result.data.allDatoCmsProject.edges.map(edge => {
+      //   createPage({
+      //     path: `about/${edge.node.slug}`,
+      //     component: path.resolve(`./src/templates/project.js`),
+      //     context: {
+      //       slug: edge.node.slug,
+      //     },
+      //   })
+      // })
+      const articleData = result.data.allDatoCmsProject.edges;
+      const articleTemplate = path.resolve(`./src/templates/project.js`);
+
+      articleData.map((edge, index) => {
+        const prev = index < articleData.length - 1 ? articleData[index + 1] : null;
+
         createPage({
           path: `about/${edge.node.slug}`,
-          component: path.resolve(`./src/templates/project.js`),
-          context: {
+          component: articleTemplate,
+          context: { 
             slug: edge.node.slug,
+            prev
           },
         })
-      })      
+      })
       resolve()
     })
   })

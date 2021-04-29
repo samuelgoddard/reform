@@ -26,7 +26,8 @@ module.exports = {
         'black': '#1F1F1F',
         'offblack': '#333333',
         'offwhite': '#E5E1DF',
-        'offwhitelight' : '#EBE9E8'
+        'offwhitelight' : '#EBE9E8',
+        'blackhalf' : 'rgba(51, 51, 51, 0.7)'
       },
       fontFamily: {
         'sans': ['Freigeist', 'Helvetica', 'Arial', 'sans-serif'],

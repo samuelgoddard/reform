@@ -138,9 +138,89 @@ class AboutPage extends React.Component {
             {/* The Pinned area - BUGFIX */}
             <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane"></div>
 
-            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 pt-5 pb-32 md:py-24 md:mt-2 xl:mt-5 overflow-hidden md:mb-0" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
-              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title md:w-10/12 xl:w-8/12 xl:pr-0 textreveal">
-                At Reform we thrive on identifying development opportunities both for ourselves &amp; with land owners not realising the true potential of their assets.
+            <motion.div variants={fade} className="md:col-span-1 md:h-screen relative px-4 pt-5 pb-40 md:py-24 md:mt-2 xl:mt-5 overflow-hidden md:mb-0" data-scroll-sticky data-scroll data-scroll-target="#pinned-pane">
+              <h1 className="mb-0 pb-0 md:-mt-16 xl:-mt-20 relative about-title w-11/12 md:w-10/12 xl:w-8/12 xl:pr-0 textreveal">
+              <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  At Reform we thrive
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.15, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  on <span className="italic">identifying</span> 
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  development
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  opportunities both
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  for ourselves <span className="italic">&amp;</span> with
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  land owners not
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  realising the <span className="italic">true</span>
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  <span className="italic">potential</span> of their
+                  </motion.span>
+                </span>
+                <span className="overflow-hidden block">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 1, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
+                    className="block">
+                  assets.
+                  </motion.span>
+                </span>
               </h1>
               {/* <div className="top-0 left-0 right-0 bottom-0 absolute h-full z-0 flex items-center justify-center">
                 <Motif classList={"w-1/2 md:-mt-16 xl:-mt-20 motif skew-y-12"} />
@@ -157,7 +237,7 @@ class AboutPage extends React.Component {
                   <div className="mb-12 md:mb-16 xl:mb-24 z-30">
 
                     <div className="hidden md:block h-screen relative z-40 pointer-events-none" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
-                      <div className="w-full h-56 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-gradient-to-t z-40"></div>
+                      <div className="w-full h-64 hidden md:block from-black via-black to-transparent absolute bottom-0 left-0 right-0 bg-gradient-to-t z-40"></div>
                     </div>
 
                     {/* <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change md:-mt-100vh" /> */}
@@ -212,7 +292,7 @@ class AboutPage extends React.Component {
 
                         {this.props.data.team.edges.map(({ node }, i) => {
                           return (
-                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-16 md:mb-16 xl:mb-16 relative" key={i}>
+                            <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-16 md:mb-20 xl:mb-24 relative" key={i}>
                               {/* <Img fluid={ node.image.fluid } className="w-full mb-8 h-auto" /> */}
                               <div className="flex items-center border-b border-offwhite pb-5 mb-5">
                                 <h4 className="mb-0 pb-0">

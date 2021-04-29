@@ -284,11 +284,56 @@
 }
 
 .logo-first-r {
-
+  transform: translateX(33px);
+}
+.logo-e {
+  transform: translateX(182.501px);
+}
+.logo-f {
+  transform: translateX(329.316px);
+}
+.logo-o {
+  transform: translateX(437.674px);
+}
+.logo-last-r {
+  transform: translateX(607.028px);
+}
+.logo-m {
+  transform: translateX(756.529px);
 }
 
+.logo-reveal:hover,
+.logo-reveal:focus {
+  .logo-first-r {
+    transform: translate(33px, 105%);
+    transition-delay: 0.375s;
+  }
+  .logo-e {
+    transform: translate(182.501px, 105%);
+    transition-delay: 0.3s;
+  }
+  .logo-f {
+    transform: translate(329.316px, 105%);
+    transition-delay: 0.225s;
+  }
+  .logo-o {
+    transform: translate(437.674px);
+    transition-delay: 0.15s;
+  }
+  .logo-last-r {
+    transform: translate(607.028px, 105%);
+    transition-delay: 0.075s;
+  }
+  .logo-m {
+    transform: translate(756.529px, 105%);
+  }
+}
 
 .gatsby-image-wrapper img,
 .gatsby-image-wrapper > div {
   transition: opacity 1000ms ease 0s !important;
+}
+
+textarea {
+  resize: none;
 }
