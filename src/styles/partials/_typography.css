@@ -145,13 +145,13 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @apply text-2xl leading-none tracking-tiny;
+  @apply text-2xl leading-none tracking-tiny  !important;
 
   @screen md {
-    @apply text-3xl leading-none;
+    @apply text-3xl leading-none  !important;
   }
   @screen xl {
-    @apply text-3xl leading-none;
+    @apply text-3xl leading-none  !important;
   }
 }
 

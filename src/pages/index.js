@@ -226,12 +226,12 @@ class IndexPage extends React.Component {
                           <div key={i} className={`w-full p-4 pt-8 md:p-12 lg:p-16 xl:p-20 ${ i === whatWeDoBlocksFirstCol.length - 1 ? 'border-b border-offblack md:border-b-0' : 'border-b border-offblack' }`}>
                             
                             <div className="scrollreveal">
-                              <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">
+                              <h3 className="h4 flex flex-wrap items-center w-full mb-6 md:mb-8">
                               
                                 <NumberShape number={i + 1} />
                               
 
-                              <span className="flex-1 -mt-1 inline-block ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h4>
+                              <span className="flex-1 -mt-1 inline-block ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h3>
                               <div className="w-110/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
@@ -243,12 +243,12 @@ class IndexPage extends React.Component {
                         return (
                           <div key={i} className={`w-full p-4 pt-8 md:p-12 lg:p-16 xl:p-20 ${ i === whatWeDoBlocksSecondCol.length - 1 ? '' : 'border-b border-offblack' }`}>
                             <div className="scrollreveal">
-                              <h4 className="flex flex-wrap items-center w-full mb-6 md:mb-8">
+                              <h3 className="h4 flex flex-wrap items-center w-full mb-6 md:mb-8">
                               
                                 <NumberShape number={i + 3} />
                               
 
-                              <span className="flex-1 -mt-1 ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h4>
+                              <span className="flex-1 -mt-1 ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h3>
                               <div className="w-110/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
