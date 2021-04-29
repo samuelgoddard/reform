@@ -14,7 +14,7 @@ class Layout extends React.Component {
     super()
     this.state = {
       showIntro: true,
-      timing: 5.5,
+      timing: 5,
     }
   }
 
@@ -26,7 +26,7 @@ class Layout extends React.Component {
         showIntro: false,
         timing: 0
       })
-     }, 5800);
+     }, 5200);
   }
 
   render() {
@@ -49,12 +49,12 @@ class Layout extends React.Component {
           >
             <motion.div
               animate={{ translateY: "-100%" }}
-              transition={{ duration: 0.1, delay: 5.5, ease: [0.76, 0, 0.24, 1] }}
+              transition={{ duration: 0.1, delay: 53, ease: [0.76, 0, 0.24, 1] }}
               className="fixed w-full h-screen z-70"
             >
               <motion.div
                 animate={{ opacity: 0 }}
-                transition={{ duration: 1.25, delay: 4.25, ease: [0.76, 0, 0.24, 1] }}
+                transition={{ duration: 1.25, delay: 3.55, ease: [0.76, 0, 0.24, 1] }}
                 className="h-screen w-full z-40 bg-offwhite flex flex-wrap"
               >
                 <motion.div
@@ -71,7 +71,7 @@ class Layout extends React.Component {
                     <motion.div 
                       initial={{ translateY: 0 }}
                       animate={{ translateY: "-100%" }}
-                      transition={{ duration: 1, delay: 3.75, ease: [0.76, 0, 0.24, 1] }}
+                      transition={{ duration: 1, delay: 3.55, ease: [0.76, 0, 0.24, 1] }}
                       className="w-full h-10px bg-offwhite absolute top-0 left-0 right-0 z-10"></motion.div>
                       <div className="w-full h-10px bg-black relative z-0 absolute top-0 left-0 right-0 z-0"></div>
 

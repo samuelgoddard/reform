@@ -277,3 +277,18 @@
     display: none;
 }
 /*! purgecss end ignore */
+
+
+.logo-char {
+  @apply transition-all ease-in-out duration-500;
+}
+
+.logo-first-r {
+
+}
+
+
+.gatsby-image-wrapper img,
+.gatsby-image-wrapper > div {
+  transition: opacity 1000ms ease 0s !important;
+}

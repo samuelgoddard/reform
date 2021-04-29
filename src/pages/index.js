@@ -231,8 +231,8 @@ class IndexPage extends React.Component {
                                 <NumberShape number={i + 1} />
                               
 
-                              <span className="flex-1 -mt-1 inline-block ml-1 md:ml-2 ">{ heading }</span></h4>
-                              <div className="w-11/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
+                              <span className="flex-1 -mt-1 inline-block ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h4>
+                              <div className="w-110/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
                         )
@@ -248,8 +248,8 @@ class IndexPage extends React.Component {
                                 <NumberShape number={i + 3} />
                               
 
-                              <span className="flex-1 -mt-1 ml-1 md:ml-2 ">{ heading }</span></h4>
-                              <div className="w-11/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
+                              <span className="flex-1 -mt-1 ml-1 md:ml-2 pr-12 md:pr-0 ">{ heading }</span></h4>
+                              <div className="w-110/12 md:w-11/12 xl:w-10/12 xl:max-w-2xl" dangerouslySetInnerHTML={{ __html: text }} />
                             </div>
                           </div>
                         )

@@ -47,7 +47,6 @@ class AboutPage extends React.Component {
     new SplitText(".textreveal", { type: "lines", linesClass: "lineChildNonScroll" });
     new SplitText(".textreveal", { type: "lines", linesClass: "lineParentNonScroll" });
     
-
     let noneScrollItems = document.querySelectorAll(".lineChildNonScroll");
 
     gsap.from(noneScrollItems, {
@@ -148,7 +147,7 @@ class AboutPage extends React.Component {
               </div> */}
             </motion.div>
 
-            <motion.div variants={fade} className="md:col-span-1 border-t md:border-l md:border-t-0 border-black bg-black texture-overlay texture-overlay--dark text-white relative">
+            <motion.div variants={fade} className="md:col-span-1 border-t md:border-l md:border-t-0 border-black bg-black texture-overlay texture-overlay--dark text-offwhite relative">
               <div className="content relative" id="content-pane">
                 
                 {/* <div className="h-full about-content"> */}
@@ -165,7 +164,7 @@ class AboutPage extends React.Component {
 
                     <Img fluid={ this.props.data.about.image.fluid } className="w-full object-cover object-center relative md:h-screen will-change z-50 md:-mt-100vh" />
 
-                    <div className="md:p-12 xl:p-16 relative z-30">
+                    <div className="md:p-12 xl:p-16 md:pt-24 xl:pt-32 relative z-30">
                       <div className="lg:flex lg:flex-wrap items-start px-4 md:px-0 pt-12 md:pt-0">
                         <NumberShape number="A" white />
                         <div className="scrollreveal w-11/12 md:w-9/12 lg:w-8/12 xl:w-8/12 2xl:w-7/12 xl:max-w-md">
@@ -180,7 +179,7 @@ class AboutPage extends React.Component {
                               <Link className="block relative group about-image-teaser" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
                                   <div className="overflow-hidden grayimage">
-                                    <Img fluid={ node.image[0].fluid } className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-1000 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
+                                    <Img fluid={ node.image[0].fluid } backgroundColor={'#333333'} className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-1000 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
                                   </div>
                                 </div>
                                 <div className="pb-5 mb-5 relative px-4 md:px-0">
@@ -207,7 +206,7 @@ class AboutPage extends React.Component {
                         <div className="lg:flex lg:flex-wrap items-start">
                           <NumberShape number="B" white />
                           <div className="scrollreveal">
-                            <h2 className="mb-12 md:mb-16 xl:mb-24 lg:pt-2 lg:ml-3">An experienced<br/>team</h2>
+                            <h2 className="mb-12 md:mb-16 xl:mb-24 lg:pt-2 lg:ml-3 text-offwhite">An experienced<br/>team</h2>
                           </div>
                         </div>
 
@@ -300,7 +299,7 @@ export const query = graphql`
             fluid(
               maxWidth: 1400,
               imgixParams: { w: "1300", h: "850", fit: "fillmax", crop: "center" }) {
-              ...GatsbyDatoCmsFluid
+              ...GatsbyDatoCmsFluid_noBase64
             }
           }
         }
@@ -312,13 +311,6 @@ export const query = graphql`
           firstName
           secondName
           jobTitle
-          image {
-            fluid(
-              maxWidth: 1200,
-              imgixParams: { w: "1200", h: "740", fit: "fillmax", crop: "center" }) {
-              ...GatsbyDatoCmsFluid
-            }
-          }
           bio
         }
       }

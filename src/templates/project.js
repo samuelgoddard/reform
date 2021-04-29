@@ -49,12 +49,12 @@ const ProjectPage = ({ data: { project }, location}) => {
       <div className="">
         <motion.section
           initial="initial"
-          className="w-full md:min-h-screen md:max-h-screen bg-offwhitelight relative"
+          className="w-full min-h-screen md:max-h-screen bg-offwhitelight relative"
           animate="enter"
           exit="exit"
         >
           {/* <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane-project"></div> */}
-          <div className="flex flex-wrap relative md:h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
+          <div className="flex flex-wrap relative min-h-screen md:h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
 
             <motion.div variants={fade} className="w-full md:w-7/12 2xl:w-8/12 md:px-6 md:pr-0 pt-6 md:pt-10 xl:pt-12 order-2 md:order-1">
               <div className="flex flex-col w-full h-full">
@@ -88,7 +88,7 @@ const ProjectPage = ({ data: { project }, location}) => {
                     </div> */}
                     <h1 className="project-title mb-6 md:mb-6 max-w-sm block textreveal">{ project.title }</h1>
 
-                    <div className="max-w-sm block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
+                    <div className="max-w-md block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
                   </div>
                 </div>
               </div>

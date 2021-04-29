@@ -81,7 +81,8 @@ module.exports = {
     scale: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
     translate: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
     width: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
-    padding: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus']
+    padding: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus'],
+    opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover', 'group-focus']
   },
   corePlugins: {
     container: false
