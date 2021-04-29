@@ -41,10 +41,10 @@ export default class Carousel extends Component {
           <div className="flex flex-wrap items-center w-full px-4 md:px-0">
             <div className="flex-1 md:pt-2">
               <span className="hidden md:block uppercase text-xs leading-none textreveal">{ this.props.location }</span>
-              <span className="block text-sm md:text-lg xl:text-xl textreveal leading-tight">{this.props.title}</span>
+              <span className="block text-sm md:text-lg xl:text-xl textreveal leading-tight -mt-2 md:mt-0">{this.props.title}</span>
             </div>
 
-            <div className="w-auto ml-auto border-l md:border-none border-black h-full pt-3 pb-5 md:py-4 pl-2">
+            <div className="w-auto ml-auto border-l md:border-none border-black h-full pt-3 pb-6 md:py-4 pl-2">
               <div className="flex flex-wrap items-center">
                 {/* <span className="hidden md:block md:text-lg">1/18</span> */}
                 <div className="flex ml-3">
