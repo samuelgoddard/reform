@@ -302,8 +302,7 @@
   transform: translateX(756.529px);
 }
 
-.logo-reveal:hover,
-.logo-reveal:focus {
+.logo-reveal:hover {
   .logo-first-r {
     transform: translate(33px, 105%);
     transition-delay: 0.375s;
