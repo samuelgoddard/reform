@@ -128,7 +128,7 @@ const ProjectPage = ({ data: { project }, location, pageContext}) => {
                     {/* <div className="md:hidden">
                       <NumberShape number="1" />
                     </div> */}
-                    <h1 className="project-title mb-6 md:mb-6 max-w-sm block textreveal">{ project.title }</h1>
+                    <h1 className="project-title mb-6 md:mb-6 max-w-sm block textreveal pr-8 md:pr-0">{ project.title }</h1>
 
                     <div className="max-w-md block textrevealContent" dangerouslySetInnerHTML={{ __html: project.content }}></div>
                   </div>
