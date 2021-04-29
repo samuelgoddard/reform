@@ -149,7 +149,7 @@ class PrivacyPage extends React.Component {
                   <span className="mb-4 block textreveal" dangerouslySetInnerHTML={{ __html:this.props.data. contact.address }} />
                 )}
                 { this.props.data.contact.emailAddress && (
-                  <a href={`mailto:${this.props.data.contact.emailAddress}`} className="block group textreveal">
+                  <a href={`mailto:${this.props.data.contact.emailAddress}`} className="block group textreveal underline">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{this.props.data.contact.emailAddress}</span>
@@ -159,7 +159,7 @@ class PrivacyPage extends React.Component {
                   </a>
                 )}
                 { this.props.data.contact.phoneNumber && (
-                  <a href={`tel:${this.props.data.contact.phoneNumber}`} className="block group textreveal">
+                  <a href={`tel:${this.props.data.contact.phoneNumber}`} className="block group textreveal underline">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{this.props.data.contact.phoneNumber}</span>

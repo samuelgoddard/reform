@@ -13,8 +13,9 @@ const Header = ({ noLogo }) => (
             <div className="block transform translate">About <div className="hidden xs:inline-block">Us</div></div>
             <div className="hidden md:block">About <div className="hidden xs:inline-block">Us</div></div>
           </span>
-          
+          <span className="block h-px w-0 bg-offblack absolute bottom-0 left-0 transition-all duration-500 ease-in-out group-hover:w-full group-focus:w-0"></span>
         </span>
+
         <span className="absolute bottom-0 left-0 right-0 w-full flex justify-start">
           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>
         </span>
@@ -61,6 +62,8 @@ const Header = ({ noLogo }) => (
             <span className="block transform translate">Contact</span>
             <span className="hidden md:block">Contact</span>
           </span>
+
+          <span className="block h-px w-0 bg-offblack absolute bottom-0 left-0 transition-all duration-500 ease-in-out group-hover:w-full group-focus:w-0"></span>
         </span>
         <span className="absolute bottom-0 left-0 right-0 w-full flex justify-end">
           <span className="block w-0 h-px bg-offblack transition-all duration-700 ease-in-out"></span>

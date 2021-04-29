@@ -68,7 +68,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                   <span className="mb-4 block textreveal" dangerouslySetInnerHTML={{ __html: contact.address }} />
                 )}
                 { contact.emailAddress && (
-                  <a href={`mailto:${contact.emailAddress}`} className="block group textreveal">
+                  <a href={`mailto:${contact.emailAddress}`} className="block group textreveal underline">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{contact.emailAddress}</span>
@@ -78,7 +78,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                   </a>
                 )}
                 { contact.phoneNumber && (
-                  <a href={`tel:${contact.phoneNumber}`} className="block group textreveal">
+                  <a href={`tel:${contact.phoneNumber}`} className="block group textreveal underline">
                     <span className="block overflow-hidden relative h-auto md:h-5 xl:h-6 md:my-3px">
                       <span className="block transform md:group-hover:-translate-y-1/2 md:group-focus:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-px md:leading-tight">
                         <span className="block transform translate">{contact.phoneNumber}</span>
@@ -105,7 +105,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="text" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
+                          <input type="text" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -113,7 +113,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="email" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
+                          <input type="email" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -121,7 +121,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="tel" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
+                          <input type="tel" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
                       </span>
                       <span className="overflow-hidden block relative mb-6 md:mb-12">
                         <motion.span
@@ -129,7 +129,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <textarea rows="2" className="bg-offwhitelight focus:bg-offwhite font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
+                          <textarea rows="2" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
                       </span>
                       
                       <span className="overflow-hidden block relative">
