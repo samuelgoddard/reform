@@ -73,7 +73,14 @@ h1, .h1 {
 
 
   @media only screen and (max-height: 930px) {
-    font-size: 4.65vh !important;
+    font-size: 4.6vh !important;
+  }
+}
+
+@media only screen and (max-height: 930px) {
+  .contact-content {
+    max-height: 500px;
+    overflow: scroll;
   }
 }
 

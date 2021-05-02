@@ -90,8 +90,8 @@ const ContactPage = ({ data: { contact }, location}) => {
               </span>
             </motion.div>
 
-            <motion.div variants={fade} className="w-full md:w-8/12 2xl:w-9/12 relative z-30 md:border-l border-black pb-16 md:pb-0 order-1 md:order-2">
-              <div className="max-w-6xl content relative h-full">
+            <motion.div variants={fade} className="w-full md:w-8/12 2xl:w-9/12 relative z-30 md:border-l border-black pb-16 md:pb-0 order-1 md:order-2 flex items-center ">
+              <div className="max-w-6xl content relative h-full contact-content w-full">
                 <div className="py-4 px-4 md:py-0 md:px-16 xl:px-20 relative z-10 flex flex-wrap items-center h-full">
                   <div className="w-full">
                     <h1 className="contact-title mb-8 md:mb-12 3xl:mb-16 textreveal">
