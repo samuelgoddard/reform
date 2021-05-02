@@ -341,7 +341,8 @@
 }
 
 .gatsby-image-wrapper img,
-.gatsby-image-wrapper > div {
+.gatsby-image-wrapper div
+.gatsby-image-wrapper picture {
   transition: opacity 1000ms ease 0s !important;
 }
 
