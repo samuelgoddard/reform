@@ -98,14 +98,14 @@ const ContactPage = ({ data: { contact }, location}) => {
                       Let's talk about your <span className="block">next project</span>
                     </h1>
                     
-                    <form className="block w-full max-w-xl">
+                    <form className="block w-full max-w-xl" action="https://formspree.io/f/xzbydvwa" method="POST">
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
                           initial={{ translateX: "-100%" }}
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="text" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
+                          <input type="text" name="name" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Name *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -113,7 +113,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.25, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="email" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
+                          <input type="email" name="_replyto" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Email *" required />
                       </span>
                       <span className="overflow-hidden block relative mb-3 md:mb-5">
                         <motion.span
@@ -121,7 +121,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <input type="tel" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
+                          <input type="tel" name="telephone" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Phone" required />
                       </span>
                       <span className="overflow-hidden block relative mb-6 md:mb-12">
                         <motion.span
@@ -129,7 +129,7 @@ const ContactPage = ({ data: { contact }, location}) => {
                           animate={{ translateX: 0 }}
                           transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                           className="block w-full h-px bg-black absolute bottom-0 left-0"></motion.span>
-                          <textarea rows="2" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
+                          <textarea rows="2" name="projectdetails" className="bg-offwhitelight transition-all ease-in-out duration-500 focus:pl-3 font-sans py-3 border-black text-lg md:text-xl 3xl:text-2xl focus:outline-none hover:outline-none w-full block" placeholder="Project Details" />
                       </span>
                       
                       <span className="overflow-hidden block relative">
