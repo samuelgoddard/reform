@@ -3,7 +3,7 @@ require("dotenv").config({ path: `.env` })
 module.exports = {
   siteMetadata: {
     title: `Reform`,
-    siteUrl: `https://reform.vercel.app`,
+    siteUrl: `https://www.reform-property.com/`,
     description: `REFORM is an experienced, full-service agency that provides a range of services for modern building design & development.`,
     author: `@samuelgoddard`,
   },
