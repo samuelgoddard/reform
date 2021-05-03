@@ -55,7 +55,7 @@ const ProjectPage = ({ data: { project }, location, pageContext}) => {
           exit="exit"
         >
           {/* <div className="absolute top-0 left-0 right-0 bottom-0" id="pinned-pane-project"></div> */}
-          <div className="flex flex-wrap relative min-h-screen md:h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
+          <div className="flex flex-wrap relative md:h-screen" data-scroll-sticky data-scroll data-scroll-target="#scroll-container">
 
             <motion.div variants={fade} className="w-full md:w-7/12 2xl:w-8/12 md:px-6 md:pr-0 pt-6 md:pt-10 xl:pt-12 order-2 md:order-1">
               <div className="flex flex-col w-full h-full">
@@ -95,7 +95,7 @@ const ProjectPage = ({ data: { project }, location, pageContext}) => {
               </div>
             </motion.div>
 
-            <motion.div variants={fade} className="w-full md:w-5/12 2xl:w-4/12 relative z-30 h-full md:min-h-screen md:max-h-screen order-1 md:order-2 pt-12 md:pt-0">
+            <motion.div variants={fade} className="w-full md:w-5/12 2xl:w-4/12 relative z-30 h-full md:min-h-screen md:max-h-screen order-1 md:order-2 pt-12 md:pt-0 min-h-85screen">
               <div className="max-w-4xl content relative h-full md:min-h-screen md:max-h-screen">
                 <div className="md:pb-24 relative z-10 flex flex-wrap h-full md:min-h-screen md:max-h-screen md:pt-32">
 
@@ -171,15 +171,15 @@ export const query = graphql`
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { w: "1600", h: "800", fit: "fillmax", crop: "center" }) {
-          ...GatsbyDatoCmsFluid
+          imgixParams: { auto: "format", w: "1600", h: "800", fit: "fillmax", crop: "center" }) {
+          ...GatsbyDatoCmsFluid_noBase64
         }
       }
       mobileImage: image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { w: "1600", h: "1600", fit: "fillmax", crop: "center" }) {
-          ...GatsbyDatoCmsFluid
+          imgixParams: { auto: "format", w: "1600", h: "1600", fit: "fillmax", crop: "center" }) {
+          ...GatsbyDatoCmsFluid_noBase64
         }
       }
       location

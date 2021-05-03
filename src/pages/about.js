@@ -355,8 +355,8 @@ export const query = graphql`
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { w: "1600", h: "1600", sharp: 8 , fit: "fillmax", crop: "center" }) {
-          ...GatsbyDatoCmsFluid
+          imgixParams: { auto: "format", w: "1600", h: "1600", sharp: 8 , fit: "fillmax", crop: "center" }) {
+          ...GatsbyDatoCmsFluid_noBase64
         }
       }
       metaTags {
@@ -378,7 +378,7 @@ export const query = graphql`
           image {
             fluid(
               maxWidth: 1400,
-              imgixParams: { w: "1300", h: "850", fit: "fillmax", crop: "center" }) {
+              imgixParams: { auto: "format", w: "1300", h: "850", fit: "fillmax", crop: "center" }) {
               ...GatsbyDatoCmsFluid_noBase64
             }
           }

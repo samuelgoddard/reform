@@ -47,7 +47,7 @@ export default class Carousel extends Component {
             <div className="w-auto ml-auto md:border-none border-black h-full md:py-4 pl-2">
               <div className="flex flex-wrap items-center">
                 {/* <span className="hidden md:block md:text-lg">1/18</span> */}
-                <div className="flex ml-3 -mt-2 md:mt-0">
+                <div className="flex ml-3 -mt-3 md:mt-0">
                   <button onClick={this.previous} className="focus:outline-none hover:outline-none flex items-center justify-center w-8 md:w-12 h-8 md:h-12 rounded-full border border-black leading-none text-2xl mx-1 transform group">
                     <span className="block overflow-hidden relative h-auto md:h-4 xl:h-4">
                       <span className="block transform md:group-hover:-translate-y-1/2 transition duration-300 ease-in-out md:-mt-1 md:leading-tight">

@@ -49,12 +49,13 @@ module.exports = {
         '90screen': '90vh',
       },
       minHeight: {
+        '85screen': '75vh',
         '90screen': '90vh',
         contentMask: '32px',
       },
       lineHeight: {
         'negative': '0.9',
-        'tighter': '1.03'
+        'tighter': '1.05'
       },
       letterSpacing: {
         tighter: '-.04em',
