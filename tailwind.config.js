@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     content: ['./src/**/*.js',],
     options: {
-      safelist: ['is-active', 'about-image-teaser', 'grayimage'],
+      whitelist: ['is-active', 'about-image-teaser', 'grayimage', 'gatsby-image-wrapper'],
     }
   },
   theme: {

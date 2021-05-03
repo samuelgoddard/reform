@@ -258,7 +258,7 @@ class AboutPage extends React.Component {
                             <motion.div varians={fade} data-scroll className="w-full md:w-10/12 lg:w-9/12 mb-6 md:mb-12 xl:mb-16 mx-auto" key={i}>
                               <Link className="block relative group about-image-teaser" to={`/about/${node.slug}`}>
                                 <div className="overflow-hidden mb-5 scrollreveal">
-                                  <div className="overflow-hidden grayimage">
+                                  <div className="overflow-hidden grayimage gatsby-image-wrapper">
                                     <Img fluid={ node.image[0].fluid } backgroundColor={'#333333'} className="w-full h-auto mb-0 pb-0 block transform transition ease-in-out duration-1000 group-hover:scale-110 group-focus:scale-110 scale-105 will-change" />
                                   </div>
                                 </div>

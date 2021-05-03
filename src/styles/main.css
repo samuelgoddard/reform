@@ -340,9 +340,9 @@
   }
 }
 
-.gatsby-image-wrapper img {
-  -webkit-transition: opacity 1s ease 0s!important;
-  transition: opacity 1s ease 0s!important;
+.gatsby-image-wrapper img,
+.gatsby-image-wrapper > div {
+  transition: opacity 1000ms ease 0s !important;
 }
 
 textarea {
