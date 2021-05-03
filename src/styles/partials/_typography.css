@@ -224,7 +224,7 @@ p {
     @apply pt-6 block;
   }
 
-  p > a {
+  p a {
     @apply underline;
   }
 
@@ -237,17 +237,6 @@ p {
   }
 
   h2 {
-    @apply text-3xl leading-tighter tracking-tight;
-
-    @screen md {
-      @apply text-4xl leading-tighter;
-    }
-    @screen 2xl {
-      @apply text-5xl leading-tighter;
-    }
-  }
-
-  h3 {
     @apply text-2xl leading-tighter tracking-tight;
 
     @screen md {
@@ -255,6 +244,17 @@ p {
     }
     @screen 2xl {
       @apply text-4xl leading-tighter;
+    }
+  }
+
+  h3 {
+    @apply text-xl leading-tighter tracking-tight;
+
+    @screen md {
+      @apply text-2xl leading-tighter;
+    }
+    @screen 2xl {
+      @apply text-3xl leading-tighter;
     }
   }
 }
