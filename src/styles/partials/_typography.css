@@ -30,6 +30,28 @@ h1, .h1 {
   }
 }
 
+.text-404 {
+  font-size: 50vw;
+  @apply leading-tighter tracking-tight;
+
+  @screen md {
+    font-size: 35vw;
+    @apply leading-tighter;
+  }
+  @screen lg {
+    font-size: 35vw;
+    @apply  leading-tighter;
+  }
+  @screen xl {
+    font-size: 35vw;
+    @apply  leading-tighter;
+  }
+  @screen 3xl {
+    font-size: 35vw;
+    @apply  leading-tighter;
+  }
+}
+
 .about-title {
   @apply text-3xl leading-tighter tracking-tight;
 
