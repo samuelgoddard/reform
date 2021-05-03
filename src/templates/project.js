@@ -39,10 +39,10 @@ const ProjectPage = ({ data: { project }, location, pageContext}) => {
   return (
     <>
       <SEO
-        titleOverride={project.title}
-        descriptionOverride={null}
+        titleOverride={project.metaTags && project.metaTags.title ? project.metaTags.title : project.title }
+        descriptionOverride={project.metaTags && project.metaTags.description ? project.metaTags.description : null }
         pathnameOverride={location.pathname}
-        imageOverride={null}
+        imageOverride={project.metaTags && project.metaTags.image ? project.metaTags.image.url : null }
       />
 
       <Scroll callback={location} />
@@ -185,6 +185,14 @@ export const query = graphql`
       location
       content
       slug
+      metaTags {
+        title
+        description
+        twitterCard
+        image {
+          url
+        }
+      }
     }
   }
 `
