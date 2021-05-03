@@ -182,7 +182,7 @@ class AboutPage extends React.Component {
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
-                  for ourselves <span className="italic">&amp;</span> with
+                  for ourselves <span className="italic">&amp;</span> for
                   </motion.span>
                 </span>
                 <span className="overflow-hidden block">
@@ -191,7 +191,7 @@ class AboutPage extends React.Component {
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.35, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
-                  land owners not
+                  land owners who may
                   </motion.span>
                 </span>
                 <span className="overflow-hidden block">
@@ -200,7 +200,7 @@ class AboutPage extends React.Component {
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
-                  realising the <span className="italic">true</span>
+                  not yet have spotted 
                   </motion.span>
                 </span>
                 <span className="overflow-hidden block">
@@ -209,7 +209,7 @@ class AboutPage extends React.Component {
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
-                  <span className="italic">potential</span> of their
+                  the <span className="italic">true potential</span>
                   </motion.span>
                 </span>
                 <span className="overflow-hidden block">
@@ -218,7 +218,7 @@ class AboutPage extends React.Component {
                     animate={{ y: 0 }}
                     transition={{ duration: 1, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
                     className="block">
-                  assets.
+                  of their property assets.
                   </motion.span>
                 </span>
               </h1>
