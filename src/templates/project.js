@@ -171,7 +171,7 @@ export const query = graphql`
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { auto: "format", w: "1600", h: "800", fit: "fillmax", crop: "center" }) {
+          imgixParams: { auto: "format", w: "1600", h: "700", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
