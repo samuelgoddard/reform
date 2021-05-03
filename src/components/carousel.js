@@ -29,7 +29,7 @@ export default class Carousel extends Component {
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.images.map(({ fluid }, i) => {
               return (
-                <div key={i} className="w-full h-full object-cover object-center">
+                <div key={i} className="w-full h-full">
                   <Img fluid={fluid} className="w-full h-full object-cover object-center" />
                 </div>
               )

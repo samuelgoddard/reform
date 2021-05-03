@@ -63,7 +63,12 @@ const ProjectPage = ({ data: { project }, location, pageContext}) => {
 
 
                 {/* NEXT PRVE MOBIL */}
-                <Carousel images={project.image} mobileImage={project.mobileImage} location={project.timespan} title={project.location} />
+                <div className="block 2xl:hidden h-full">
+                  <Carousel images={project.image} mobileImage={project.mobileImage} location={project.timespan} title={project.location} />
+                </div>
+                <div className="hidden 2xl:block h-full">
+                  <Carousel images={project.deskImageimage} mobileImage={project.mobileImage} location={project.timespan} title={project.location} />
+                </div>
 
                 <div className={`self-start border-t border-b border-black w-full mb-0 md:mb-0 md:-mt-6 xl:-mt-4 block md:hidden md:mx-5 ${prev ? 'pt-4 pb-3' : 'pt-4 pb-4'}`}>
                   { prev ? (
@@ -171,7 +176,14 @@ export const query = graphql`
       image {
         fluid(
           maxWidth: 1600,
-          imgixParams: { auto: "format", w: "1600", h: "700", fit: "fillmax", crop: "center" }) {
+          imgixParams: { auto: "format", w: "1600", h: "580", fit: "fillmax", crop: "center" }) {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
+      }
+      deskImageimage: image {
+        fluid(
+          maxWidth: 1600,
+          imgixParams: { auto: "format", w: "1600", h: "900", fit: "fillmax", crop: "center" }) {
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
