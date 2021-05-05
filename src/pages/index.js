@@ -166,9 +166,33 @@ class IndexPage extends React.Component {
                   <div className="relative lg:-mt-12">
 
                     <div className="flex-wrap absolute top-0 left-0 hero-image-tagline hidden lg:flex z-30">
-                      <span className="block ml-5 leading-tight scrollreveal">
-                        <span className="overflow-hidden block textrevealnonescroll">
-                            Helping to transform the landscape of property development
+                      <span className="block ml-5 leading-tight">
+                        <span className="overflow-hidden block">
+                          <motion.span
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
+                            className="block">
+                          Helping to transform
+                          </motion.span>
+                        </span>
+                        <span className="overflow-hidden block">
+                          <motion.span
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
+                            className="block">
+                          the landscape of
+                          </motion.span>
+                        </span>
+                        <span className="overflow-hidden block">
+                          <motion.span
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 1, delay: 0.45, ease: [0.76, 0, 0.24, 1] }}
+                            className="block">
+                          property development
+                          </motion.span>
                         </span>
                       </span>
                     </div>
