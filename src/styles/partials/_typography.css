@@ -104,8 +104,8 @@ h1, .h1 {
 
 @media (max-height: 930px) and (min-width: 720px) {
   .contact-content {
-    max-height: 500px;
-    overflow: scroll;
+    max-height: 515px;
+    overflow: hidden;
   }
 }
 
